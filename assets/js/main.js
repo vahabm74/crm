@@ -209,4 +209,8 @@ jQuery(document).ready(function($) {
       $('.overlay').delay(200).fadeOut(0);
       $('#main .left').css({'overflow':'auto'});
     });
+    //click to show notif box
+    $('#main .left .header .notification > ul li').click(function(){
+      $('#main .left .header .notification .notif-box').slideToggle(200);
+    });
 });

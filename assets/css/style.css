@@ -356,21 +356,21 @@ body{
 #main .left .header .breadcrumbs ul li i{
   vertical-align: middle;
 }
-#main .left .header .notification ul{
+#main .left .header .notification > ul{
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
   font-size: 14px;
 }
-#main .left .header .notification ul li{
+#main .left .header .notification > ul li{
   margin-right: 12px;
 }
-#main .left .header .notification ul li a{
+#main .left .header .notification > ul li a{
   color: #636363;
   position: relative;
 }
-#main .left .header .notification ul li a .ifhas{
+#main .left .header .notification > ul li a .ifhas{
   position: absolute;
   right: 0;
   top:0;
@@ -379,6 +379,55 @@ body{
   background: red;
   display: block;
   border-radius: 50%;
+}
+#main .left .header .notification{
+  position: relative;
+}
+#main .left .header .notification .notif-box{
+  position: absolute;
+  width: 300px;
+  background: #fff;
+  left: 0;
+  z-index: 99999;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  max-height: 400px;
+  overflow: auto;
+  display: none;
+}
+#main .left .header .notification .notif-box .title{
+  font-size: 14px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  color: #636363;
+}
+#main .left .header .notification .notif-box .title span{
+  float:left;
+  font-size:12px;
+  color:red;
+  cursor: pointer;
+}
+#main .left .header .notification .notif-box ul{
+  padding: 0;
+  margin: 0;
+}
+#main .left .header .notification .notif-box ul li{
+  background: #eee;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+#main .left .header .notification .notif-box ul li p{
+  margin-bottom: 5px;
+}
+#main .left .header .notification .notif-box ul li p.notif-title{
+  color:blue;
+}
+#main .left .header .notification .notif-box ul li p.notif-content{
+  text-align: justify;
 }
 #main .left .items{
   display: flex;
@@ -516,7 +565,10 @@ body{
 #main .left .steps .content ul::-webkit-scrollbar {
   height: 5px;
 }
-#main .left .steps .content ul::-webkit-scrollbar-thumb {
+#main .left .header .notification .notif-box::-webkit-scrollbar{
+  width:5px;
+}
+#main .left .steps .content ul::-webkit-scrollbar-thumb,#main .left .header .notification .notif-box::-webkit-scrollbar-thumb {
   background: #1c1878;
   border-radius: 30px;
 }

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <title>مدیریت پروژه افروز وب</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="main">
+      <!-- begin right sidebar-->
+      <div class="right">
+        <!-- begin right sidebar header-->
+        <div class="header">
+          <!-- begin logo sidebar -->
+          <h1>
+            افروز وب
+            <a href="#!">
+              <img src="assets/images/logo.png" alt="مدیریت پروژه افروز وب" title="مدیریت پروژه افروز وب" class="img-fluid">
+            </a>
+          </h1>
+          <!-- begin colapse button -->
+          <img src="assets/images/right-arrow.png" alt="" title="" class="img-fluid colapse">
+        </div>
+        <!-- begin profile box -->
+        <div class="profile">
+          <div class="avatar">
+            <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+          </div>
+          <div class="name">
+            <p>وهاب محمدی</p>
+            <span>فرانت اند</span>
+          </div>
+        </div>
+        <!-- begin navbar -->
+        <div class="main-menu">
+          <ul>
+            <li>
+              <i class="fas fa-layer-group"></i>
+              <a href="#!">داشبورد</a>
+            </li>
+            <li>
+              <i class="fas fa-server"></i>
+              <a href="#!">پروژه ها</a>
+            </li>
+            <li>
+              <i class="fas fa-list-alt"></i>
+              <a href="#!">کارهای من</a>
+            </li>
+            <li class="active">
+              <i class="fas fa-receipt"></i>
+              <a href="#!">تیکت ها</a>
+            </li>
+            <li>
+              <i class="fas fa-fingerprint"></i>
+              <a href="#!">پروفایل</a>
+            </li>
+          </ul>
+        </div>
+        <!-- begin loguat button-->
+        <a href="#!" class="logout">خروج از حساب کاربری</a>
+      </div>
+      <!-- begin left sidebar-->
+      <div class="left detail-ticket">
+        <div class="overlay"></div>
+        <!-- begin header box -->
+        <div class="header">
+          <!-- begin breadcrumbs-->
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="#!">داشبورد</a>
+                <i class="fas fa-angle-left"></i>
+              </li>
+              <li class="current">
+                <a>تیکت ها</a>
+              </li>
+            </ul>
+          </div>
+          <!-- begin notification-->
+          <div class="notification">
+            <ul>
+              <li>
+                <a href="#!">
+                  <i class="fas fa-search"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <i class="far fa-bell"></i>
+                  <!-- if has notification this 'span' tag will be show-->
+                  <span class="ifhas"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- begin main ticket box -->
+        <div class="all all-ticket">
+          <!-- Create new ticket box-->
+          <div class="create-ticket">
+            <a href="#!">
+              <i class="fas fa-pen-fancy"></i>
+              ایجاد تیکت جدید
+            </a>
+          </div>
+          <!-- Filter tickets box-->
+          <div class="filter-tickets">
+            <div class="filter">
+              <h3 class="title">پروژه</h3>
+              <select class="ticket-name" name="ticket-name" id="ticket-name" dir="rtl">
+                <option value="" selected>انتخاب کنید</option>
+                <option value="">تعمیراتو</option>
+              </select>
+            </div>
+            <div class="filter">
+              <h3 class="title">مجری تیکت</h3>
+              <select class="ticket-user" name="ticket-user" id="ticket-user">
+                <option value="" selected>انتخاب کنید</option>
+                <option value="">وهاب محمدی</option>
+                <option value="">زهرا نخئی</option>
+              </select>
+            </div>
+            <div class="filter">
+              <h3 class="title">تاریخ بروزرسانی</h3>
+              <input type="text" name="ticket-update" value="">
+            </div>
+            <div class="filter">
+              <h3 class="title">وضعیت تیکت</h3>
+              <select class="ticket-status" name="ticket-status" id="ticket-status">
+                <option value="open">باز</option>
+                <option value="close">بسته</option>
+              </select>
+            </div>
+            <div class="filter">
+              <h3 class="title">نوع تیکت</h3>
+              <select class="ticket-kind" name="ticket-kind" id="ticket-kind">
+                <option value="" selected>انتخاب کنید</option>
+                <option value="">جدید</option>
+              </select>
+            </div>
+            <div class="filter">
+              <h3 class="title">اولویت تیکت</h3>
+              <select class="ticket-priority" name="ticket-priority" id="ticket-priority">
+                <option value="" selected>انتخاب کنید</option>
+                <option value="">اورژانسی</option>
+                <option value="">مهم</option>
+                <option value="">معمولی</option>
+                <option value="">کم اهمیت</option>
+              </select>
+            </div>
+          </div>
+          <!-- All list ticket-->
+          <div class="tickets">
+            <div class="title">
+              <img src="assets/images/ticket.png" alt="لیست تیکت ها" title="لیست تیکت ها" class="img-fluid">
+              <h3>تیکت های پشتیبانی</h3>
+              <span class="tts"></span>
+            </div>
+            <div class="content-ticket">
+              <table class="all-ticket-tb w-100" border="0">
+                <thead>
+                  <tr>
+                    <th colspan="3" >عنوان تیکت</th>
+                    <th id="kinds-ticket">نوع تیکت
+                      <i class="fas fa-sort"></i>
+                    </th>
+                    <th id="do-ticket">مجری تیکت
+                      <i class="fas fa-sort"></i>
+                    </th>
+                    <th id="creator-ticket">سازنده تیکت
+                      <i class="fas fa-sort"></i>
+                    </th>
+                    <th id="project-ticket">پروژه
+                      <i class="fas fa-sort"></i>
+                    </th>
+                    <th id="status-ticket">وضعیت تیکت
+                      <i class="fas fa-sort"></i>
+                    </th>
+                    <th id="answers-ticket">پاسخ ها
+                      <i class="fas fa-sort"></i>
+                    </th>
+                    <th id="dates-ticket">آخرین به روزرسانی
+                      <i class="fas fa-sort"></i>
+                    </th>
+                    <th id="priorities-ticket">اولویت
+                      <i class="fas fa-sort"></i>
+                    </th>
+                    <th>عملیات</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!--if ticket was over 'tr' has class 'over' else if ticket pending has class pend-->
+                  <tr>
+                    <td colspan="3" class="subject-ticket">
+                      <a href="#!">گزارش ماهانه پروژه تعمیراتو در اولویت</a>
+                    </td>
+                    <td>تسک</td>
+                    <td>مژگان زارعی</td>
+                    <td>مهری محمدی</td>
+                    <td>Fixtman</td>
+                    <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                    <td class="open">باز</td>
+                    <td>۳</td>
+                    <td>۱۴۰۰/۰۹/۲۸</td>
+                    <td>عادی</td>
+                    <td class="ticket-action">
+                      <!-- done-ticket has two classes icon - if is done 'i' tag has class 'fas fa-ban' else has class 'fas fa-check'-->
+                      <a href="#!" class="done-ticket done" title="تکمیل تیکت">
+                        <i class="fas fa-check"></i>
+                      </a>
+                      <a href="#!" class="remove-ticket" title="حذف تیکت">
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="over">
+                    <td  colspan="3" class="subject-ticket">
+                      <a href="#!">گزارش ماهانه</a>
+                    </td>
+                    <td>تسک</td>
+                    <td>مهری محمدی</td>
+                    <td>وهاب محمدی</td>
+                    <td>Fixtman</td>
+                    <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                    <td class="close">بسته</td>
+                    <td>۴</td>
+                    <td>۱۴۰۰/۰۹/۲۷</td>
+                    <td>عادی</td>
+                    <td class="ticket-action">
+                      <!-- done-ticket has two classes icon - if is done 'i' tag has class 'fas fa-ban' else has class 'fas fa-check'-->
+                      <a href="#!" class="done-ticket done" title="تکمیل تیکت">
+                        <i class="fas fa-ban"></i>
+                      </a>
+                      <a href="#!" class="remove-ticket" title="حذف تیکت">
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="pend">
+                    <td  colspan="3" class="subject-ticket">
+                      <a href="#!">گزارش ماهانه</a>
+                    </td>
+                    <td>تسک</td>
+                    <td>مژگان زارعی</td>
+                    <td>مهری محمدی</td>
+                    <td>Fixtman</td>
+                    <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                    <td class="open">باز</td>
+                    <td>۳</td>
+                    <td>۱۴۰۰/۰۹/۲۸</td>
+                    <td>عادی</td>
+                    <td class="ticket-action">
+                      <!-- done-ticket has two classes icon - if is done 'i' tag has class 'fas fa-ban' else has class 'fas fa-check'-->
+                      <a href="#!" class="done-ticket done" title="تکمیل تیکت">
+                        <i class="fas fa-ban"></i>
+                      </a>
+                      <a href="#!" class="remove-ticket" title="حذف تیکت">
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="over">
+                    <td  colspan="3" class="subject-ticket">
+                      <a href="#!">گزارش ماهانه</a>
+                    </td>
+                    <td>تسک</td>
+                    <td>مهری محمدی</td>
+                    <td>وهاب محمدی</td>
+                    <td>Fixtman</td>
+                    <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                    <td class="close">بسته</td>
+                    <td>۴</td>
+                    <td>۱۴۰۰/۰۹/۲۷</td>
+                    <td>عادی</td>
+                    <td class="ticket-action">
+                      <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                      <a href="#!" class="done-ticket done" title="تکمیل تیکت">
+                        <i class="fas fa-check"></i>
+                      </a>
+                      <a href="#!" class="remove-ticket" title="حذف تیکت">
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  colspan="3" class="subject-ticket">
+                      <a href="#!">گزارش ماهانه</a>
+                    </td>
+                    <td>تسک</td>
+                    <td>مژگان زارعی</td>
+                    <td>مهری محمدی</td>
+                    <td>Fixtman</td>
+                    <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                    <td class="open">باز</td>
+                    <td>۳</td>
+                    <td>۱۴۰۰/۰۹/۲۸</td>
+                    <td>عادی</td>
+                    <td class="ticket-action">
+                      <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                      <a href="#!" class="done-ticket done" title="تکمیل تیکت">
+                        <i class="fas fa-check"></i>
+                      </a>
+                      <a href="#!" class="remove-ticket" title="حذف تیکت">
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="over">
+                    <td  colspan="3" class="subject-ticket">
+                      <a href="#!">گزارش ماهانه</a>
+                    </td>
+                    <td>تسک</td>
+                    <td>مهری محمدی</td>
+                    <td>وهاب محمدی</td>
+                    <td>Fixtman</td>
+                    <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                    <td class="close">بسته</td>
+                    <td>۴</td>
+                    <td>۱۴۰۰/۰۹/۲۷</td>
+                    <td>عادی</td>
+                    <td class="ticket-action">
+                      <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                      <a href="#!" class="done-ticket done" title="تکمیل تیکت">
+                        <i class="fas fa-check"></i>
+                      </a>
+                      <a href="#!" class="remove-ticket" title="حذف تیکت">
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  colspan="3" class="subject-ticket">
+                      <a href="#!">گزارش ماهانه</a>
+                    </td>
+                    <td>تسک</td>
+                    <td>مژگان زارعی</td>
+                    <td>مهری محمدی</td>
+                    <td>Fixtman</td>
+                    <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                    <td class="open">باز</td>
+                    <td>۳</td>
+                    <td>۱۴۰۰/۰۹/۲۸</td>
+                    <td>عادی</td>
+                    <td class="ticket-action">
+                      <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                      <a href="#!" class="done-ticket done" title="تکمیل تیکت">
+                        <i class="fas fa-check"></i>
+                      </a>
+                      <a href="#!" class="remove-ticket" title="حذف تیکت">
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Start set timer btn -->
+      <a href="#!" class="set-timer start">
+        <i class="fas fa-play"></i>
+      </a>
+      <!--start btn stop timer-->
+      <a href="#!" class="set-timer-end">
+        <i class="fas fa-stop"></i>
+        <span class="counter">
+          <!-- <span id="minutes"></span>:
+          <span id="seconds"></span> -->
+        </span>
+      </a>
+      <!-- Start form timer box-->
+      <div class="timer-box">
+        <h2>
+          جزییات تسک شما
+          <i class="far fa-window-close"></i>
+        </h2>
+        <form class="form-timer">
+          <p class="form-item">
+            <label for="project-n">پروژه</label>
+            <select class="project-n" name="project-n" id="project-n">z
+              <option value="">فیکستی من</option>
+              <option value="">تعمیراتو</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-t">تیکت</label>
+            <select class="project-t" name="project-t" id="project-t">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-task">نوع تسک</label>
+            <select class="project-task" name="project-task" id="project-task">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="description">توضیحات</label>
+            <textarea name="description" id="description" rows="4s" cols="80"></textarea>
+          </p>
+          <p class="form-item">
+            <input type="submit" name="submit" value="ذخیره">
+          </p>
+          <!--value of 'savetime' input dynamically filled when user click to stop timer-->
+          <input type="hidden" name="savetime" value="" class="savetime">
+        </form>
+      </div>
+    </div>
+  <!-- js files -->
+  <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/sort.js"></script>
+  <script type="text/javascript" src="assets/js/nice-select2.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
+</html>

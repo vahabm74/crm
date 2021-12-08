@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <title>مدیریت پروژه افروز وب</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="main">
+      <!-- begin right sidebar-->
+      <div class="right">
+        <!-- begin right sidebar header-->
+        <div class="header">
+          <!-- begin logo sidebar -->
+          <h1>
+            افروز وب
+            <a href="#!">
+              <img src="assets/images/logo.png" alt="مدیریت پروژه افروز وب" title="مدیریت پروژه افروز وب" class="img-fluid">
+            </a>
+          </h1>
+          <!-- begin colapse button -->
+          <img src="assets/images/right-arrow.png" alt="" title="" class="img-fluid colapse">
+        </div>
+        <!-- begin profile box -->
+        <div class="profile">
+          <div class="avatar">
+            <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+          </div>
+          <div class="name">
+            <p>وهاب محمدی</p>
+            <span>فرانت اند</span>
+          </div>
+        </div>
+        <!-- begin navbar -->
+        <div class="main-menu">
+          <ul>
+            <li>
+              <i class="fas fa-layer-group"></i>
+              <a href="#!">داشبورد</a>
+            </li>
+            <li>
+              <i class="fas fa-server"></i>
+              <a href="#!">پروژه ها</a>
+            </li>
+            <li>
+              <i class="fas fa-list-alt"></i>
+              <a href="#!">کارهای من</a>
+            </li>
+            <li class="active">
+              <i class="fas fa-receipt"></i>
+              <a href="#!">تیکت ها</a>
+            </li>
+            <li>
+              <i class="fas fa-fingerprint"></i>
+              <a href="#!">پروفایل</a>
+            </li>
+          </ul>
+        </div>
+        <!-- begin loguat button-->
+        <a href="#!" class="logout">خروج از حساب کاربری</a>
+      </div>
+      <!-- begin left sidebar-->
+      <div class="left detail-ticket">
+        <div class="overlay"></div>
+        <!-- begin header box -->
+        <div class="header">
+          <!-- begin breadcrumbs-->
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="#!">داشبورد</a>
+                <i class="fas fa-angle-left"></i>
+              </li>
+              <li>
+                <a href="#!">پروژه ها</a>
+                <i class="fas fa-angle-left"></i>
+              </li>
+              <li>
+                <a href="#!">تعمیراتو</a>
+                <i class="fas fa-angle-left"></i>
+              </li>
+              <li>
+                <a href="#!">تیکت های پشتیبانی</a>
+                <i class="fas fa-angle-left"></i>
+              </li>
+              <li class="current">
+                <a>جزییات تیکت</a>
+              </li>
+            </ul>
+          </div>
+          <!-- begin notification-->
+          <div class="notification">
+            <ul>
+              <li>
+                <a href="#!">
+                  <i class="fas fa-search"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <i class="far fa-bell"></i>
+                  <!-- if has notification this 'span' tag will be show-->
+                  <span class="ifhas"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- begin main ticket box -->
+        <div class="all">
+          <div class="tickets">
+            <div class="title">
+              <img src="assets/images/ticket.png" alt="عنوان تیکت" title="عنوان تیکت" class="img-fluid">
+              <h3>بررسی erp و api سایت</h3>
+              <a href="#!" class="new-ticket">
+                تاریخچه تیکت
+              </a>
+              <a href="#!" class="new-reply">
+                <i class="fas fa-plus"></i>
+                پاسخ جدید
+              </a>
+              <span class="tts"></span>
+            </div>
+            <div class="content-ticket">
+              <ul class="info-ticket">
+                <li>
+                  <p class="info-ticket-task-title">تسک</p>
+                  <p class="info-ticket-task-value">
+                    <!-- <select id="info-ticket-task-value-select" class="info-ticket-task-value-select" name="info-ticket-task-value-select">
+                      <option value="">نام تسک ۱</option>
+                      <option value="">نام تسک ۲</option>
+                    </select> -->
+                    تغییر ریسپانسیو تعمیراتو
+                  </p>
+                </li>
+                <li>
+                  <p class="info-ticket-user-title">مسئول تیکت</p>
+                  <p class="info-ticket-user-value">
+                    <select id="info-ticket-user-value-select" class="info-ticket-user-value-select" name="info-ticket-user-value-select">
+                      <option value="">وهاب محمدی</option>
+                      <option value="">مهری محمدی</option>
+                    </select>
+                  </p>
+                </li>
+                <li>
+                  <p class="info-ticket-start-title">زمان ایجاد تیکت</p>
+                  <p class="info-ticket-start-value">۱۴۰۰/۱۰/۰۷</p>
+                </li>
+                <li>
+                  <p class="info-ticket-update-title">آخرین به روزرسانی</p>
+                  <p class="info-ticket-update-value">۱۴۰۰/۱۰/۱۰</p>
+                </li>
+                <li>
+                  <p class="info-ticket-answer-title">پاسخ داده شده</p>
+                  <p class="info-ticket-answer-value">بله</p>
+                </li>
+                <li>
+                  <p class="info-ticket-priority-title">اولویت</p>
+                  <p class="info-ticket-priority-value">
+                    <select id="info-ticket-priority-value-select" class="info-ticket-priority-value-select" name="info-ticket-priority-value-select">
+                      <option value="">مهم</option>
+                      <option value="">اورژانسی</option>
+                      <option value="">معمولی</option>
+                    </select>
+                  </p>
+                </li>
+                <li>
+                  <p class="info-ticket-status-title">وضعیت تیکت</p>
+                  <!-- if tickets is open yet has class 'open' else has class 'closed'-->
+                  <p class="info-ticket-status-value open">
+                    <select class="info-ticket-status-select" name="info-ticket-status-select" id="info-ticket-status-select">
+                      <option value="" class="open">باز</option>
+                      <option value="" class="closed">بسته</option>
+                    </select>
+                  </p>
+                </li>
+              </ul>
+              <!-- begin messages -->
+              <div class="messages">
+                <!-- every message is section tag -->
+                <!-- message has class 'even' means user create tickets and message has class 'odd' means another user reply ticket-->
+                <section class="message even">
+                  <div class="top-message">
+                    <!--user name has ticket-->
+                    <p class="message-user-name">وهاب محمدی</p>
+                    <p class="message-date">
+                      <span class="date">۱۴۰۰/۰۷/۱۰</span> |
+                      <span class="time">۱۶:۱۸</span>
+                    </p>
+                    <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+                    <div class="message-content">
+                      <p>
+                        آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . و به صورت کاروسل نمایش داده شود .
+                      </p>
+                      <p>
+                        خیلی ممنونم
+                      </p>
+                    </div>
+                  </div>
+                  <!-- begin remove and edit action btn-->
+                  <div class="message-cta">
+                    <a href="#!" title="ویرایش پاسخ">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#!" title="حذف پاسخ">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </div>
+                </section>
+                <section class="message odd">
+                  <div class="top-message">
+                    <!--user name has ticket-->
+                    <p class="message-user-name">وهاب محمدی</p>
+                    <p class="message-date">
+                      <span class="date">۱۴۰۰/۰۷/۱۰</span> |
+                      <span class="time">۱۶:۱۸</span>
+                    </p>
+                    <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+                    <div class="message-content">
+                      <p>
+                        آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . و به صورت کاروسل نمایش داده شود .
+                      </p>
+                      <p>
+                        خیلی ممنونم
+                      </p>
+                    </div>
+                  </div>
+                  <!-- begin remove and edit action btn-->
+                  <div class="message-cta">
+                    <a href="#!" title="ویرایش پاسخ">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#!" title="حذف پاسخ">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </div>
+                </section>
+                <section class="message even">
+                  <div class="top-message">
+                    <!--user name has ticket-->
+                    <p class="message-user-name">وهاب محمدی</p>
+                    <p class="message-date">
+                      <span class="date">۱۴۰۰/۰۷/۱۰</span> |
+                      <span class="time">۱۶:۱۸</span>
+                    </p>
+                    <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+                    <div class="message-content">
+                      <p>
+                        آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . و به صورت کاروسل نمایش داده شود .
+                      </p>
+                      <p>
+                        خیلی ممنونم
+                      </p>
+                    </div>
+                  </div>
+                  <!-- begin remove and edit action btn-->
+                  <div class="message-cta">
+                    <a href="#!" title="ویرایش پاسخ">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#!" title="حذف پاسخ">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </div>
+                </section>
+              </div>
+              <!-- begin reply popup box - if box is open has class 'show' -->
+              <div id="reply">
+                <i class="far fa-window-close"></i>
+                <div class="reply-h">
+                  <p>
+                    پاسخ جدید
+                  </p>
+                  <p>
+                    ۱۴۰۰/۰۷/۱۰ | ۱۶:۱۸
+                  </p>
+                </div>
+                <div class="reply-info">
+                  <ul>
+                    <li>
+                      <p class="name">تیکت :</p>
+                      <p class="value">بررسی روال کاری آقای عباسی</p>
+                    </li>
+                    <li>
+                      <p class="name">مسئول :</p>
+                      <p class="value">
+                        <select class="user-reply" name="user-reply" id="user-reply">
+                          <option value="">
+                            وهاب محمدی
+                          </option>
+                          <option value="">
+                            مهری محمدی
+                          </option>
+                        </select>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="name">الویت :</p>
+                      <p class="value">
+                        <select class="priority-reply" name="priority-reply" id="priority-reply">
+                          <option value="">
+                            مهم
+                          </option>
+                          <option value="">
+                            عادی
+                          </option>
+                        </select>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="name">وضعیت :</p>
+                      <p class="value">باز</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="all-text-reply overflow-hidden">
+                  <textarea name="reply-text" rows="6" cols="80" placeholder="متن تیکت"></textarea>
+                </div>
+                <div class="reply-action">
+                  <input type="file" name="reply-upload" value="" class="reply-upload" id="reply-upload">
+                  <label for="reply-upload">آپلود عکس</label>
+                  <input type="submit" name="reply-submit" value="ارسال" class="reply-submit">
+                </div>
+              </div>
+              <!--begin history of ticket box-->
+              <div class="history-ticket">
+                <i class="far fa-window-close"></i>
+                <div class="title">
+                  <h3>
+                    تاریخچه تیکت
+                  </h3>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>تاریخ</th>
+                      <th>کاربر</th>
+                      <th>فعالیت</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--every tr has class 'odd' or 'even' based on date-->
+                    <tr class="odd">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۵</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="odd">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۵</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="odd">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۵</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="odd">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۵</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="odd">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۵</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="odd">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۵</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="odd">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۵</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="even">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۶</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="even">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۶</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="even">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۶</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="even">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۶</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="even">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۶</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="even">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۶</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="odd">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۷</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                    <tr class="odd">
+                      <td>۱۵:۰۵ - ۱۴۰۰/۰۷/۲۷</td>
+                      <td>وهاب محمدی</td>
+                      <td class="text-ticket">آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- begin notes box-->
+          <div class="notes">
+            <div class="title">
+              <h3>نوت ها</h3>
+              <a href="#!">
+                <i class="fas fa-plus"></i>
+                نوت جدید
+              </a>
+            </div>
+            <div class="list-notes">
+              <!--every note has data 'data-bgcolor' that gett from checkbox color selector-->
+              <div class="note" data-bgcolor="#cdfaba">
+                <div class="n-subject">
+                  <p class="n-right">
+                    اطلاعات پروژه
+                    <i class="fas fa-angle-down"></i>
+                  </p>
+                  <p class="n-left">
+                    <!-- begin edit and remove note-->
+                    <a href="#!">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#!">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                    <span class="date">۱۴۰۰/۰۷/۲۲</span>
+                    <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+                  </p>
+                </div>
+                <div class="n-content">
+                  آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . و به صورت کاروسل نمایش داده شود
+                </div>
+              </div>
+              <div class="note" data-bgcolor="#fcd2ff">
+                <div class="n-subject">
+                  <p class="n-right">
+                    اطلاعات پروژه
+                    <i class="fas fa-angle-down"></i>
+                  </p>
+                  <p class="n-left">
+                    <!-- begin edit and remove note-->
+                    <a href="#!">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#!">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                    <span class="date">۱۴۰۰/۰۷/۲۲</span>
+                    <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+                  </p>
+                </div>
+                <div class="n-content">
+                  آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . و به صورت کاروسل نمایش داده شود .
+                </div>
+              </div>
+              <div class="note" data-bgcolor="#c3f5f9">
+                <div class="n-subject">
+                  <p class="n-right">
+                    اطلاعات پروژه
+                    <i class="fas fa-angle-down"></i>
+                  </p>
+                  <p class="n-left">
+                    <!-- begin edit and remove note-->
+                    <a href="#!">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#!">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                    <span class="date">۱۴۰۰/۰۷/۲۲</span>
+                    <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+                  </p>
+                </div>
+                <div class="n-content">
+                  آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . و به صورت کاروسل نمایش داده شود .
+                </div>
+              </div>
+              <div class="note" data-bgcolor="#f8ef9d">
+                <div class="n-subject">
+                  <p class="n-right">
+                    اطلاعات پروژه
+                    <i class="fas fa-angle-down"></i>
+                  </p>
+                  <p class="n-left">
+                    <!-- begin edit and remove note-->
+                    <a href="#!">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#!">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                    <span class="date">۱۴۰۰/۰۷/۲۲</span>
+                    <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+                  </p>
+                </div>
+                <div class="n-content">
+                  آقای وهاب محمدی برای امشب روی گالری نمونه کارها کار کنید لطفا . عکس ها بر مبنای نوع سرویس گروه بندی شرده باشن . و به صورت کاروسل نمایش داده شود .
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--begin new note popup box-->
+          <div id="new-note">
+            <i class="far fa-window-close"></i>
+            <div class="note-h">
+              <p>
+                نوت جدید
+              </p>
+              <p>
+                ۱۴۰۰/۰۷/۲۲
+              </p>
+            </div>
+            <div class="note-content">
+              <input type="text" name="note-title" value="" placeholder="عنوان نوت" required>
+              <textarea name="note-text" rows="6" cols="80" placeholder="متن نوت"></textarea>
+              <div class="note-footer">
+                <p>
+                  <span class="name">
+                    نوشته شده توسط :
+                  </span>
+                  <span class="value">
+                    <select class="note-username" name="note-username" id="note-username">
+                      <option value="" selected>وهاب محمدی</option>
+                      <option value="">زهرا نخئی</option>
+                    </select>
+                  </span>
+                </p>
+                <p>
+                  <span class="name">رنگ نوت :</span>
+                  <span class="value">
+                    <!-- after click on label 'textarea' has 'data-color' width code color value-->
+                    <input type="radio" name="note-color" value="#cdfaba" id="color1">
+                    <label for="color1" data-color="#cdfaba"></label>
+                    <input type="radio" name="note-color" value="#fcd2ff" id="color2">
+                    <label for="color2" data-color="#fcd2ff"></label>
+                    <input type="radio" name="note-color" value="#c3f5f9" id="color3">
+                    <label for="color3" data-color="#c3f5f9"></label>
+                    <input type="radio" name="note-color" value="#f8ef9d" id="color4">
+                    <label for="color4" data-color="#f8ef9d"></label>
+                  </span>
+                </p>
+                <p>
+                  <input type="submit" name="note-submit" value="افزودن">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Start set timer btn -->
+      <a href="#!" class="set-timer start">
+        <i class="fas fa-play"></i>
+      </a>
+      <!--start btn stop timer-->
+      <a href="#!" class="set-timer-end">
+        <i class="fas fa-stop"></i>
+        <span class="counter">
+          <!-- <span id="minutes"></span>:
+          <span id="seconds"></span> -->
+        </span>
+      </a>
+      <!-- Start form timer box-->
+      <div class="timer-box">
+        <h2>
+          جزییات تسک شما
+          <i class="far fa-window-close"></i>
+        </h2>
+        <form class="form-timer">
+          <p class="form-item">
+            <label for="project-n">پروژه</label>
+            <select class="project-n" name="project-n" id="project-n">
+              <option value="">انتخاب کنید</option>
+              <option value="">فیکستی من</option>
+              <option value="">تعمیراتو</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-t">تیکت</label>
+            <select class="project-t" name="project-t" id="project-t">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-task">نوع تسک</label>
+            <select class="project-task" name="project-task" id="project-task">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="description">توضیحات</label>
+            <textarea name="description" id="description" rows="4s" cols="80"></textarea>
+          </p>
+          <p class="form-item">
+            <input type="submit" name="submit" value="ذخیره">
+          </p>
+          <!--value of 'savetime' input dynamically filled when user click to stop timer-->
+          <input type="hidden" name="savetime" value="" class="savetime">
+        </form>
+      </div>
+    </div>
+  <!-- js files -->
+  <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/sort.js"></script>
+  <script type="text/javascript" src="assets/js/nice-select2.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
+</html>

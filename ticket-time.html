@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <title>مدیریت پروژه افروز وب</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="main">
+      <!-- begin right sidebar-->
+      <div class="right">
+        <!-- begin right sidebar header-->
+        <div class="header">
+          <!-- begin logo sidebar -->
+          <h1>
+            افروز وب
+            <a href="#!">
+              <img src="assets/images/logo.png" alt="مدیریت پروژه افروز وب" title="مدیریت پروژه افروز وب" class="img-fluid">
+            </a>
+          </h1>
+          <!-- begin colapse button -->
+          <img src="assets/images/right-arrow.png" alt="" title="" class="img-fluid colapse">
+        </div>
+        <!-- begin profile box -->
+        <div class="profile">
+          <div class="avatar">
+            <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+          </div>
+          <div class="name">
+            <p>وهاب محمدی</p>
+            <span>فرانت اند</span>
+          </div>
+        </div>
+        <!-- begin navbar -->
+        <div class="main-menu">
+          <ul>
+            <li>
+              <i class="fas fa-layer-group"></i>
+              <a href="#!">داشبورد</a>
+            </li>
+            <li>
+              <i class="fas fa-server"></i>
+              <a href="#!">پروژه ها</a>
+            </li>
+            <li>
+              <i class="fas fa-list-alt"></i>
+              <a href="#!">کارهای من</a>
+            </li>
+            <li class="active">
+              <i class="fas fa-receipt"></i>
+              <a href="#!">تیکت ها</a>
+            </li>
+            <li>
+              <i class="fas fa-fingerprint"></i>
+              <a href="#!">پروفایل</a>
+            </li>
+          </ul>
+        </div>
+        <!-- begin loguat button-->
+        <a href="#!" class="logout">خروج از حساب کاربری</a>
+      </div>
+      <!-- begin left sidebar-->
+      <div class="left detail-ticket">
+        <div class="overlay"></div>
+        <!-- begin header box -->
+        <div class="header">
+          <!-- begin breadcrumbs-->
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="#!">داشبورد</a>
+                <i class="fas fa-angle-left"></i>
+              </li>
+              <li class="current">
+                <a>تیکت ها</a>
+              </li>
+            </ul>
+          </div>
+          <!-- begin notification-->
+          <div class="notification">
+            <ul>
+              <li>
+                <a href="#!">
+                  <i class="fas fa-search"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <i class="far fa-bell"></i>
+                  <!-- if has notification this 'span' tag will be show-->
+                  <span class="ifhas"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- begin main ticket box -->
+        <div class="all all-ticket ticket-time">
+          <!-- Filter tickets box-->
+          <div class="filter-tickets filter-shape">
+            <div class="filter">
+              <h3 class="title">فیلتر روز و ماه</h3>
+              <div class="box">
+                <select class="filter-day" name="filter-day" id="filter-day" dir="rtl">
+                  <option value="" selected>روز</option>
+                  <option value="sat">شنبه</option>
+                  <option value="sun">یکشنبه</option>
+                  <option value="mon">دوشنبه</option>
+                  <option value="thu">سه شنبه</option>
+                  <option value="wed">چهارشنبه</option>
+                  <option value="tue">پنجشنبه</option>
+                  <option value="fri">جمعه</option>
+                </select>
+                <select class="filter-month" name="filter-month" id="filter-month">
+                  <option value="" selected>ماه</option>
+                  <option value="1">فروردین</option>
+                  <option value="2">اردیبهشت</option>
+                  <option value="3">خرداد</option>
+                  <option value="4">تیر</option>
+                  <option value="5">مرداد</option>
+                  <option value="6">شهریور</option>
+                  <option value="7">مهر</option>
+                  <option value="8">آبان</option>
+                  <option value="9">آذر</option>
+                  <option value="10">دی</option>
+                  <option value="11">بهمن</option>
+                  <option value="12">اسفند</option>
+                </select>
+              </div>
+            </div>
+            <div class="filter">
+              <h3 class="title">فیلتر براساس تاریخ</h3>
+              <div class="box">
+                <input type="text" name="filter-date-start" value="" class="filter-date-start" placeholder="شروع">
+                <input type="text" name="filter-date-end" value="" class="filter-date-end"  placeholder="پایان">
+              </div>
+            </div>
+            <div class="filter">
+              <h3 class="title">فیلتر نوع کار</h3>
+              <select class="filter-work" name="filter-work" id="filter-work">
+                <option value="" selected>انتخاب کنید</option>
+                <option value="">مورد یک</option>
+              </select>
+            </div>
+            <div class="filter">
+              <h3 class="title">فیلتر پروژه</h3>
+              <select class="filter-project" name="filter-project" id="filter-project">
+                <option value="" selected>انتخاب کنید</option>
+                <option value="">تعمیراتو</option>
+              </select>
+            </div>
+            <div class="filter">
+              <h3 class="title">فیلتر تیکت</h3>
+              <select class="filter-ticket" name="filter-ticket" id="filter-ticket">
+                <option value="" selected>انتخاب کنید</option>
+                <option value="">مورد یک</option>
+              </select>
+            </div>
+          </div>
+          <!-- All list ticket-->
+          <div class="tickets">
+            <div class="all-ticket-t">
+              <!-- begin header time ticket list-->
+              <div class="time-header">
+                <ul>
+                  <li>ردیف</li>
+                  <li>تاریخ</li>
+                  <li>روز</li>
+                  <li>پروژه</li>
+                  <li>تیکت</li>
+                  <li>نوع تسک</li>
+                  <li>توضیحات</li>
+                  <li>زمان(دقیقه)</li>
+                  <li>۳۲.۵
+                    <span>ساعت</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- begin main box ticket time-->
+              <div class="time-main">
+                <div class="right-t">
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                  <ul>
+                    <li>۲</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                  <ul>
+                    <li>۳</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپمتن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                </div>
+                <div class="left-t">
+                  <span>۲۸۰</span>
+                </div>
+              </div>
+              <div class="time-main">
+                <div class="right-t">
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                </div>
+                <div class="left-t">
+                  <span>۲۸۰</span>
+                </div>
+              </div>
+              <div class="time-main">
+                <div class="right-t">
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                </div>
+                <div class="left-t">
+                  <span>۲۸۰</span>
+                </div>
+              </div>
+              <div class="time-main">
+                <div class="right-t">
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                  <ul>
+                    <li>۱</li>
+                    <li>۱۴۰۰/۰۹/۲۰</li>
+                    <li>چهارشنبه</li>
+                    <li>فیکستی من</li>
+                    <li>
+                      <a href="!">گزارش ماهیانه</a>
+                    </li>
+                    <li>گرافیک دیزاین</li>
+                    <li class="description">متن ساختگی با تولید سادگی نامفهوم در صنعت چاپ</li>
+                    <li>۱۸۰</li>
+                  </ul>
+                </div>
+                <div class="left-t">
+                  <span>۲۸۰</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Start set timer btn -->
+      <a href="#!" class="set-timer start">
+        <i class="fas fa-play"></i>
+      </a>
+      <!--start btn stop timer-->
+      <a href="#!" class="set-timer-end">
+        <i class="fas fa-stop"></i>
+        <span class="counter">
+          <!-- <span id="minutes"></span>:
+          <span id="seconds"></span> -->
+        </span>
+      </a>
+      <!-- Start form timer box-->
+      <div class="timer-box">
+        <h2>
+          جزییات تسک شما
+          <i class="far fa-window-close"></i>
+        </h2>
+        <form class="form-timer">
+          <p class="form-item">
+            <label for="project-n">پروژه</label>
+            <select class="project-n" name="project-n" id="project-n">
+              <option value="">فیکستی من</option>
+              <option value="">تعمیراتو</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-t">تیکت</label>
+            <select class="project-t" name="project-t" id="project-t">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-task">نوع تسک</label>
+            <select class="project-task" name="project-task" id="project-task">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="description">توضیحات</label>
+            <textarea name="description" id="description" rows="4s" cols="80"></textarea>
+          </p>
+          <p class="form-item">
+            <input type="submit" name="submit" value="ذخیره">
+          </p>
+          <!--value of 'savetime' input dynamically filled when user click to stop timer-->
+          <input type="hidden" name="savetime" value="" class="savetime">
+        </form>
+      </div>
+    </div>
+  <!-- js files -->
+  <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/sort.js"></script>
+  <script type="text/javascript" src="assets/js/nice-select2.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
+</html>

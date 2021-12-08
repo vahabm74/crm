@@ -1,0 +1,1661 @@
+/*
+Theme Name : CRM Afrozwewb
+Author : Vahab Mohammadi
+Vesrion : 1.0.0
+*/
+
+/*********** include fonts **************/
+@font-face {
+  font-family: 'Yekan';
+  src: url('../font/iranyekanwebregular.eot');
+  src: url('../font/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
+       url('../font/iranyekanwebregular.ttf') format('truetype'),
+       url('../font/iranyekanwebregular.woff') format('woff'),
+       url('../font/iranyekanwebregular.woff2') format('woff2');
+}
+
+/********* reset style *************/
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+}
+a,a:hover{
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}
+body{
+  font-family: 'Yekan';
+  font-size: 14px;
+  line-height: 22px;
+}
+/************ index style*********/
+#main{
+  display: flex;
+  justify-content: space-between;
+  background: #ecedf2;
+  min-height: 100vh;
+}
+#main .set-timer,#main .set-timer-end{
+  position: fixed;
+  left: 20px;
+  bottom: 50px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid #1927c5;
+  color: #36c55c;
+  box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  z-index: 999;
+}
+#main .set-timer-end{
+  border-color:orange;
+  color:#333;
+}
+#main .set-timer-end i::before{
+  content:"\f04d";
+}
+#main .set-timer-end .counter{
+  position: absolute;
+  right: -52px;
+  direction: ltr;
+  background: #fff;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  padding: 0 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  min-width: 45px;
+  display: none;
+  color:#333;
+}
+#main .set-timer-end{
+  display:none;
+}
+#main .timer-box{
+  position: fixed;
+  background: #fff;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  max-width: 27%;
+  max-height: 450px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  z-index: 99999999;
+  display: none;
+}
+#main .timer-box h2{
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ccc;
+}
+#main .timer-box h2 i{
+  float: left;
+  margin-top: 3px;
+  color: #636363;
+  font-size: 16px;
+  cursor: pointer;
+}
+#main .timer-box h2 i:hover{
+  color:red;
+}
+#main .timer-box .form-timer .form-item{
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+#main .timer-box .form-timer .form-item label{
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+#main .timer-box .form-timer .form-item select,#main .timer-box .form-timer .form-item textarea{
+  width:100%;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 5px;
+  border:1px solid #ccc;
+  outline: 0;
+  resize: none;
+  color:#636363;
+}
+#main .timer-box .form-item:last-of-type{
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#main .timer-box .form-item input[type=submit]{
+  background: #00dafc;
+  border: none;
+  color: #fff;
+  display: block;
+  width: 35%;
+  padding: 5px 0;
+  border-radius: 5px;
+  outline: 0;
+}
+#main .right{
+  min-height: 100vh;
+  overflow: hidden;
+  width: 15%;
+  background: rgb(26,17,124);
+  background: linear-gradient(180deg, rgba(26,17,124,1) 0%, rgba(34,42,105,1) 100%);
+  box-shadow: -2px 0 10px rgb(0 0 0 / 20%);
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+  transition: all ease 400ms;
+  position: relative;
+}
+#main .right.open{
+  width:5%;
+}
+#main .right .header{
+  background: #070159;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main .right .header h1{
+  font-size: 0;
+  margin: 0;
+}
+#main .right .header h1 img{
+  max-width: 130px;
+}
+#main .right .header .colapse{
+  max-width: 16px;
+  cursor: pointer;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+  transition: all ease 400ms;
+}
+#main .right .header .colapse:hover{
+  -webkit-filter: brightness(3.5);
+  -moz-filter: brightness(3.5);
+  -ms-filter: brightness(3.5);
+  -o-filter: brightness(3.5);
+  filter: brightness(3.5);
+}
+#main .right.open .header{
+  justify-content: center;
+}
+#main .right.open .header h1{
+  display: none;
+}
+#main .right.open .header .colapse{
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#main .right .profile{
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+}
+#main .right .profile .avatar{
+  margin-left: 14px;
+}
+#main .right .profile .avatar img{
+  max-width: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(255 255 255 / 20%);
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
+  transition: all ease 400ms;
+}
+#main .right.open .profile .avatar{
+  margin: 0;
+}
+#main .right.open .profile .avatar img{
+  max-width: 45px;
+}
+#main .right .profile .name p{
+  margin: 0;
+}
+#main .right .profile .name span{
+  font-size: 12px;
+}
+#main .right.open .profile .name{
+  display: none;
+}
+#main .right.open .profile{
+  justify-content: center;
+}
+#main .right .main-menu ul{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+#main .right .main-menu ul li{
+  margin-bottom: 0;
+  padding: 15px 2em 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#main .right .main-menu ul li i{
+  font-size: 20px;
+  margin-left: 10px;
+  color: #fff;
+}
+#main .right .main-menu ul li.active,#main .right .main-menu ul li:hover{
+  background: #070159;
+}
+#main .right .main-menu ul li a{
+  color: #ffffff;
+  display: block;
+}
+#main .right.open .main-menu ul li{
+  padding: 15px 0;
+  justify-content: center;
+  position: relative;
+}
+#main .right.open .main-menu ul li a{
+  font-size: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#main .right .logout{
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 70%;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  margin: auto;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #fff;
+}
+#main .right .logout:hover{
+  background: #ffffff;
+  color: rgb(26,17,124);
+}
+/******* left sidebar style********/
+#main .left{
+  width: 85%;
+  padding: 15px 35px;
+  transition: all ease 300ms;
+}
+#main .left.detail-project{
+  padding-top: 172px;
+}
+#main .left.cc{
+  width: 95%;
+}
+#main .left::-webkit-scrollbar {
+  /* width: 5px; */
+}
+#main .left::-webkit-scrollbar-thumb {
+  background: #1c1878;
+  border-radius: 30px;
+}
+#main .left::-webkit-scrollbar-thumb:hover{
+  background: #07015a;
+}
+#main .left .header-section{
+  position: fixed;
+  width: 85%;
+  top: 0;
+  padding: 15px 35px 15px 50px;
+  left: 0;
+  z-index: 999;
+  background: #ecedf2;
+  transition: all ease 300ms;
+}
+#main .left .header-section.cc{
+  width: 95%;
+}
+#main .left .header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#main .left .header .breadcrumbs ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-size: 12px;
+}
+#main .left .header .breadcrumbs ul li{
+  margin-left: 10px;
+}
+#main .left .header .breadcrumbs ul li a{
+  color: #070159;
+  padding-left: 5px;
+}
+#main .left .header .breadcrumbs ul li.current a{
+  color: #636363;
+}
+#main .left .header .breadcrumbs ul li i{
+  vertical-align: middle;
+}
+#main .left .header .notification ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+#main .left .header .notification ul li{
+  margin-right: 12px;
+}
+#main .left .header .notification ul li a{
+  color: #636363;
+  position: relative;
+}
+#main .left .header .notification ul li a .ifhas{
+  position: absolute;
+  right: 0;
+  top:0;
+  width: 5px;
+  height: 5px;
+  background: red;
+  display: block;
+  border-radius: 50%;
+}
+#main .left .items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+#main .left .items .box{
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  height: 62px;
+  position: relative;
+}
+#main .left .items .box.open{
+  border-radius: 5px 5px 0 0;
+}
+#main .left .items .box h2{
+  font-size: 14px;
+  margin: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+#main .left .items .box img{
+  max-width: 40px;
+}
+#main .left .items .box h2 i{
+  vertical-align: middle;
+  padding-right: 6px;
+  color: #636363;
+  transition: all ease 300ms;
+}
+#main .left .items .box h2 i.turn{
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+#main .left .items .box .details{
+  position: absolute;
+  top: 62px;
+  background: #fff;
+  width: 100%;
+  right: 0;
+  padding: 15px;
+  font-size: 12px;
+  box-shadow: 0 7px 10px rgb(0 0 0 / 10%);
+  border-radius: 0 0 5px 5px;
+  display: none;
+}
+#main .left .items .box .details p{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+#main .left .items .box .details p .name{
+  font-weight: bold;
+}
+#main .left .items .box .details p a.file{
+  background: #ceffb4;
+  color: #333333;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+#main .left .items .box .details p a.nofile{
+  color:#f99ba0;
+}
+#main .left .items .box .details p .edit{
+  color:#f33030;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: normal;
+}
+#main .left .items .box.project-status span{
+    background: #fee4cb;
+    padding: 5px;
+    font-size: 16px;
+    font-family: monospace;
+}
+#main .left .items .box.project-name{
+  background: rgb(212,208,228);
+  background: linear-gradient(180deg, rgba(212,208,228,1) 0%, rgba(211,214,238,1) 100%);
+}
+#main .left .items .box.customer-info{
+  background: rgb(221,229,243);
+  background: linear-gradient(180deg, rgba(221,229,243,1) 0%, rgba(213,225,244,1) 100%);
+}
+#main .left .items .box.project-deadline{
+  background: rgb(239,228,226);
+  background: linear-gradient(180deg, rgba(239,228,226,1) 0%, rgba(239,228,226,1) 100%);
+}
+#main .left .items .box.project-status{
+  background: rgb(221,236,239);
+  background: linear-gradient(180deg, rgba(221,236,239,1) 0%, rgba(207,230,233,1) 100%);
+}
+#main .left .steps{
+  background: #fff;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+#main .left .steps .title{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #ebf6ff;
+  padding: 5px;
+}
+#main .left .steps .title img{
+  max-width: 25px;
+}
+#main .left .steps .title h3{
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 11px;
+}
+#main .left .steps .content ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+#main .left .steps .content ul::-webkit-scrollbar {
+  height: 5px;
+}
+#main .left .steps .content ul::-webkit-scrollbar-thumb {
+  background: #1c1878;
+  border-radius: 30px;
+}
+#main .left .steps .content ul::-webkit-scrollbar-thumb:hover{
+  background: #07015a;
+}
+#main .left .steps .content ul li{
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 5px;
+  margin-left: 10px;
+}
+#main .left .steps .content ul li .number-step{
+  position: absolute;
+  top: -12px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+#main .left .steps .content ul li .name-step{
+  font-size: 11px;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+#main .left .steps .content ul li p{
+  margin: 0;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+}
+#main .left .steps .content ul li.done{
+  background: #ecfce2;
+}
+#main .left .steps .content ul li.doing{
+  background: #fff9e6;
+}
+#main .left .steps .content ul li.pending{
+  background: #f5f5f5;
+}
+#main .left .steps .content ul li.done .status-step .check-status-step{
+  background: #c5f8a9;
+  padding: 0 5px;
+  border-radius: 5px;
+  background: #e8e8e8;
+  margin-right: 10px;
+}
+#main .left .steps .content ul li.doing .status-step .check-status-step{
+  background: #f8dba9;
+  padding: 0 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+#main .left .steps .content ul li.pending .status-step .check-status-step{
+  background: #e8e8e8;
+  padding: 0 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+#main .left .all{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#main .left .all .tickets{
+  width:70%;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+}
+#main .left .all .tickets .title{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f8fbd1;
+  padding: 5px;
+  position: relative;
+}
+#main .left .all .tickets .title img{
+  max-width: 25px;
+}
+#main .left .all .tickets .title h3{
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 11px;
+}
+#main .left .all .tickets .title h3 .show-tooltip{
+  padding: 10px 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  color: #636363;
+}
+#main .left .all .tickets .content{
+  overflow: auto;
+}
+#main .left .all .tickets .content::-webkit-scrollbar {
+    height: 5px;
+}
+#main .left .all .tickets .content::-webkit-scrollbar-thumb {
+    background: #1c1878;
+    border-radius: 30px;
+}
+#main .left .all .tickets .content table{
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+}
+#main .left .all .tickets .content table thead tr th{
+  padding: 10px 5px;
+  font-size: 12px;
+}
+#main .left .all .tickets .content table thead tr th[id]{
+  cursor: pointer;
+}
+#main .left .all .tickets .content table thead tr th[id]:hover i,#main .left .all .tickets .content table thead tr th[id].sort i{
+  color: #d86363;
+}
+#main .left .all .tickets .content table tbody{
+  font-size: 12px;
+  text-align: center;
+}
+#main .left .all .tickets .content table tbody tr.over{
+  background: #f9d9cf;
+}
+#main .left .all .tickets .content table tbody tr.pend{
+  background: orange;
+}
+#main .left .all .tickets .content table tbody tr td{
+  padding: 5px 10px;
+}
+#main .left .all .tickets .content table tbody tr td.ticket-subject{
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+#main .left .all .tickets .content table tbody tr td.ticket-subject a:hover{
+  text-decoration: underline;
+  color:#070159;
+}
+#main .left .all .tickets .content table tbody tr td.ticket-status.closed{
+  color:#d86363;
+}
+#main .left .all .tickets .content table tbody tr td.ticket-action,#main .left .all-ticket-tb tbody tr td.ticket-action{
+  display: flex;
+  justify-content: space-between;
+}
+#main .left .all .tickets .content table tbody tr td.ticket-action a,#main .left .all-ticket-tb tbody tr td.ticket-action a{
+  background: #eee;
+  border-radius: 2px;
+  color: #636363;
+  padding: 1px 6px;
+  font-size: 10px;
+}
+#main .left .all .tickets .content table tbody tr td.ticket-action a.done,#main .left .all .tickets .content table tbody tr td.ticket-action a:hover,#main .left .all-ticket-tb tbody tr td.ticket-action a.done,#main .left .all-ticket-tb tbody tr td.ticket-action a:hover{
+  background: #e3fed4;
+}
+#main .left .all-ticket-tb tbody tr td.ticket-action a:hover,#main .left .all .tickets .content table tbody tr td.ticket-action a:hover{
+  background: rgb(33 41 105);
+  color:#fff;
+}
+#main .left .all .users{
+  width: 27%;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+}
+#main .left .all .users .title{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fee8ff;
+  padding: 5px;
+}
+#main .left .all .users .title img{
+  max-width: 34px;
+}
+#main .left .all .users .title h3{
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 11px;
+}
+#main .left .all .users .content ul{
+  padding: 0;
+  margin: 0;
+}
+#main .left .all .users .content ul li{
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  border-bottom: 1px solid #eee;
+}
+#main .left .all .users .content ul li:last-child{
+  border: none;
+}
+#main .left .all .users .content ul li img{
+  max-width: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+#main .left .all .users .content ul li .username{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+#main .left .all .users .content ul li .username span:first-child{
+  font-weight: bold;
+}
+#main .left .all .users .content ul li .username span:last-child{
+  font-size: 10px;
+}
+#main .left .all .users .content ul li a{
+  color: #2c2685;
+}
+#main .left .all .users .content ul li a:hover{
+  color:orange;
+}
+
+/***************** Ticket details page style *******************/
+.left.detail-ticket .header{
+  margin-bottom: 30px;
+}
+#main .left{
+  position: relative;
+}
+#main .left .overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vw;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  z-index: 99999;
+}
+#main .left.detail-ticket .all .tickets .title{
+    background: #ddecfe;
+}
+#main .left .all .tickets .title .new-ticket{
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  font-size: 10px;
+}
+#main .left .all .tickets .title .new-ticket:hover{
+  text-decoration: underline;
+  color:#ffc107;
+}
+#main .left .all .tickets .title .new-ticket i{
+  font-size: 7px;
+  vertical-align: middle;
+}
+#main .left .all .tickets .title .new-reply{
+  font-size: 12px;
+  margin-right: 10px;
+  background: #1b1677;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+#main .left .all .tickets .title .new-reply:hover{
+  opacity: 0.95;
+  background: orange;
+}
+#main .left .all .tickets .title .new-reply i{
+  font-size: 8px;
+  vertical-align: middle;
+}
+#main .left .all .tickets .content-ticket{
+  background: #ffffff;
+  padding: 15px 10px;
+  position: relative;
+}
+#main .left .all .tickets .content-ticket .info-ticket{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 12px;
+}
+#main .left .all .tickets .content-ticket .info-ticket li{
+  border-left: 1px solid #ccc;
+  padding: 0 10px;
+  min-width: 12.5%;
+}
+#main .left .all .tickets .content-ticket .info-ticket li .nice-select .list li{
+  max-width: 100%;
+  border:none;
+}
+#main .left .all .tickets .content-ticket .info-ticket li:first-child{
+  max-width: 13.5%;
+}
+#main .left .all .tickets .content-ticket .info-ticket li:last-child{
+  border:none;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p{
+  margin: 0;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p:first-child{
+  font-weight: bold;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p:last-child{
+  font-size: 11px;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p.info-ticket-task-value{
+  width: auto;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p.info-ticket-priority-value{
+  /* color: #0cb50c; */
+  font-weight: bold;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p.info-ticket-status-value{
+  border-radius: 5px;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p.info-ticket-status-value.open{
+  background: #a6efa6;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p.info-ticket-status-value.closed{
+  background: #efa6a6;
+}
+#main .left .all .tickets .content-ticket .messages{
+  margin-top: 30px;
+}
+#main .left .all .tickets .content-ticket .messages .message{
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+#main .left .all .tickets .content-ticket .messages .message .message-cta{
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  display: flex;
+  font-size: 12px;
+  z-index: 4;
+}
+#main .left .all .tickets .content-ticket .messages .message .message-cta a{
+  margin-right: 5px;
+  color: #636363;
+}
+#main .left .all .tickets .content-ticket .messages .message .message-cta a:hover{
+  color:red;
+}
+#main .left .all .tickets .content-ticket .messages .message .send-message,#main .left .all .tickets .content-ticket .messages .message .audience-message{
+  display: flex;
+  justify-content: space-between;
+}
+#main .left .all .tickets .content-ticket .messages .message.odd{
+  background: #f2f2f2;
+}
+#main .left .all .tickets .content-ticket .messages .message.even{
+  background: #f2f8fe;
+}
+#main .left .all .tickets .content-ticket .messages .message .send-message .user-info{
+  width: 15%;
+  font-size: 11px;
+  border-left: 1px dashed #ccc;
+}
+#main .left .all .tickets .content-ticket .messages .message .send-message .user-info .user-details{
+  margin-bottom:10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+}
+#main .left .all .tickets .content-ticket .messages .message .send-message .user-info .user-details .name{
+  font-weight: bold;
+}
+#main .left .all .tickets .content-ticket .messages .message .send-message .user-info img{
+  max-width: 87%;
+  border-radius: 10px;
+}
+#main .left .all .tickets .content-ticket .messages .message .send-message .user-content-message{
+  width: 83%;
+  text-align: right;
+  font-size: 12px;
+}
+#main .left .all .tickets .content-ticket .messages .message .send-message .user-content-message .message-date{
+  margin-bottom: 10px;
+}
+#main .left .all .tickets .content-ticket .messages .message .send-message .user-content-message .user-main-message{
+  text-align: justify;
+}
+#main .left .all .tickets .content-ticket .messages .message .audience-message{
+  margin-top: 10px;
+}
+#main .left .all .tickets .content-ticket .messages .message .audience-message .right-audience{
+  width:15%;
+  font-size: 11px;
+}
+#main .left .all .tickets .content-ticket .messages .message .audience-message .right-audience .audience-info{
+  display: flex;
+  align-items: center;
+}
+#main .left .all .tickets .content-ticket .messages .message .audience-message .right-audience p{
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#main .left .all .tickets .content-ticket .messages .message .audience-message .right-audience p .audience-name{
+  margin-right: 2px;
+}
+#main .left .all .tickets .content-ticket .messages .message .audience-message .right-audience img{
+  max-width: 30%;
+  border-radius: 10px;
+}
+#main .left .all .tickets .content-ticket .messages .message .audience-message .left-audience{
+  width: 85%;
+  text-align: right;
+  position: relative;
+}
+#main .left .all .tickets .content-ticket .messages .message .audience-message .left-audience input[type=text],#main .left .all .tickets .content-ticket .messages .message .bottom-message input[type=text]{
+  width: 100%;
+  margin-top: 36px;
+  border: none;
+  background: #ffffff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 2px;
+  outline: 0;
+}
+#main .left .all .tickets .content-ticket .messages .message .audience-message .left-audience input[type=submit],#main .left .all .tickets .content-ticket .messages .message .bottom-message input[type=submit]{
+  position: absolute;
+  left: 7px;
+  top: 41px;
+  background: #e3fcd6;
+  border: none;
+  padding: 0 10px;
+  font-size: 10px;
+  border-radius: 2px;
+  outline: 0;
+}
+#main .left .all .tickets .content-ticket .messages .message .top-message{
+  position: relative;
+  font-size: 12px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 25px;
+}
+#main .left .all .tickets .content-ticket .messages .message .top-message .message-date,#main .left .all .tickets .content-ticket .messages .message .top-message .message-user-name{
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+#main .left .all .tickets .content-ticket .messages .message .top-message .message-user-name{
+  right:0;
+  left:auto;
+}
+#main .left .all .tickets .content-ticket .messages .message .top-message img{
+  max-width: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+#main .left .all .tickets .content-ticket .messages .message .top-message .message-content{
+  text-align: justify;
+  line-height: 22px;
+  margin: 0;
+}
+#main .left .all .tickets .content-ticket .messages .message .top-message .message-content p{
+  margin-bottom: 5px;
+}
+#main .left .all .tickets .content-ticket .messages .message .bottom-message{
+  position: relative;
+}
+#main .left .all .tickets .content-ticket .messages .message .bottom-message input[type=text]{
+  margin-top: 8px;
+}
+#main .left .all .tickets .content-ticket .messages .message .bottom-message input[type=submit]{
+  top:13px;
+}
+#main .left .all .tickets .content-ticket #reply{
+  position: fixed;
+  padding: 15px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  max-width: 600px;
+  margin: auto;
+  max-height: 325px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  border-radius: 10px;
+  display: none;
+  z-index: 9999999;
+}
+#main .left .all .tickets .content-ticket #reply.show{
+  display: block;
+}
+#main .left .all .tickets .content-ticket #reply .ck-editor__main{
+  overflow: auto;
+  height: 200px;
+}
+#main .left .all .tickets .content-ticket #reply .reply-h,#main .left .all #new-note .note-h{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+#main .left .all .tickets .content-ticket #reply .reply-h p:first-child,#main .left .all #new-note .note-h p:first-child{
+  font-weight: bold;
+}
+#main .left .all .tickets .content-ticket #reply .reply-h p,#main .left .all #new-note .note-h p{
+  margin: 0;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info{
+  margin-bottom: 10px;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info > ul{
+  padding: 0;
+  margin: 0;
+  display: grid;
+  text-align: right;
+  font-size: 12px;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info > ul > li{
+  border-radius: 5px;
+  width: auto;
+  padding: 5px;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info > ul > li .name{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info > ul > li .value{
+  margin-bottom: 0;
+  font-weight: bold;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info > ul > li:first-child{
+  background: #e3fed4;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info > ul > li:nth-child(2){
+  background: #e4fafc;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info > ul > li:nth-child(3){
+  background: #ebebeb;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info > ul > li:last-child{
+  background: #ffebeb;
+}
+#main .left .all .tickets .content-ticket #reply .reply-info > ul > li select{
+  width: 100%;
+  outline: 0;
+}
+#main .left .all .tickets .content-ticket #reply textarea{
+  width: 100%;
+  padding: 10px;
+  background: #fafed4;
+  font-size: 12px;
+  color: #333333;
+  text-align: justify;
+  border-radius: 5px;
+  border:none;
+  outline: 0;
+  resize: none;
+}
+#main .left .all .tickets .content-ticket #reply .reply-action{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+#main .left .all .tickets .content-ticket #reply .reply-action input[type=file]{
+  display: none;
+}
+#main .left .all .tickets .content-ticket #reply .reply-action label{
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 2px 10px;
+  background: #e3e3e3;
+  color: #333333;
+  cursor: pointer;
+}
+#main .left .all .tickets .content-ticket #reply .reply-action input[type=submit],#main .left .all #new-note .note-content input[type=submit]{
+  border-radius: 5px;
+  padding: 2px 10px;
+  background: #cefbb5;
+  border: none;
+  outline: 0;
+
+}
+#main .left .all .tickets .content-ticket #reply i,#main .left .all #new-note i,#main .left .all .tickets .content-ticket .history-ticket i{
+  position: absolute;
+  right: 0;
+  top: -25px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+#main .left .all .tickets .content-ticket .history-ticket{
+  position: fixed;
+  width: 80%;
+  height: auto;
+  background: #fff;
+  left: 30px;
+  top: 40px;
+  margin: auto;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  border-radius: 5px;
+  z-index: 9999999;
+  display: none;
+}
+#main .left .all .tickets .content-ticket .history-ticket i{
+  top: 4px;
+  left: 4px;
+  right: auto;
+  z-index: 999;
+  color: #333333;
+}
+#main .left .all .tickets .content-ticket .history-ticket table thead{
+  text-align: center;
+  background: #e5fafd;
+  font-size: 12px;
+}
+#main .left .all .tickets .content-ticket .history-ticket table thead tr th,#main .left .all .tickets .content-ticket .history-ticket table tr td{
+  padding: 5px;
+}
+#main .left .all .tickets .content-ticket .history-ticket table tbody{
+  max-height: 460px;
+  overflow: auto;
+  display: block;
+}
+#main .left .all .tickets .content-ticket .history-ticket table tr{
+  display: grid;
+  grid-template-columns: 20% 20% 60%;
+  font-size: 12px;
+  text-align: center;
+}
+#main .left .all .tickets .content-ticket .history-ticket table tr td.text-ticket{
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    padding: 5px;
+    overflow: hidden;
+    text-align: right;
+}
+#main .left .all .tickets .content-ticket .history-ticket table tr td.text-ticket:hover{
+  /* white-space: normal;
+  text-align: right; */
+}
+#main .left .all .tickets .content-ticket .history-ticket table tbody tr.odd{
+  background: #eeeeee;
+}
+#main .left .all .tickets .content-ticket .history-ticket table tbody tr.even{
+  background: #fff;
+}
+#main .left .all .notes{
+  width: 28%;
+  background: #fff;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  border-radius: 5px;
+}
+#main .left .all .notes .title,#main .left .all .tickets .content-ticket .history-ticket .title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e6fed9;
+  padding: 5px;
+  position: relative;
+  margin-bottom: 5px;
+}
+#main .left .all .tickets .content-ticket .history-ticket .title{
+  background: #fedfc2;
+  padding: 10px 5px;
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+}
+#main .left .all .tickets .content-ticket .history-ticket .title h3{
+  font-size: 12px;
+  margin: 0;
+}
+#main .left .all .tickets .content-ticket .history-ticket table{
+  width: 100%;
+}
+#main .left .all .notes .title h3{
+  margin: 0;
+  font-size: 14px;
+}
+#main .left .all .notes .title a{
+  font-size: 12px;
+  color: #212969;
+}
+#main .left .all .notes .title a i{
+  font-size: 8px;
+}
+#main .left .all .notes .list-notes{
+  padding: 15px;
+  max-height: 100vh;
+  overflow: auto;
+}
+#main .left .all .notes .list-notes::-webkit-scrollbar,#main .left .all .tickets .content-ticket .history-ticket tbody::-webkit-scrollbar{
+  width: 5px;
+}
+#main .left .all .notes .list-notes::-webkit-scrollbar-thumb,#main .left .all .tickets .content-ticket .history-ticket tbody::-webkit-scrollbar-thumb{
+  background: #1c1878;
+  border-radius: 30px;
+}
+#main .left .all .notes .list-notes::-webkit-scrollbar-thumb:hover,#main .left .all .tickets .content-ticket .history-ticket tbody::-webkit-scrollbar-thumb:hover{
+  background: #07015a;
+}
+#main .left .all .notes .list-notes .note{
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+#main .left .all .notes .list-notes .note .n-subject{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 10px;
+}
+#main .left .all .notes .list-notes .note .n-subject .n-right,#main .left .all .notes .list-notes .note .n-subject .n-left{
+  margin: 0;
+}
+#main .left .all .notes .list-notes .note .n-subject .n-right{
+  cursor: pointer;
+}
+#main .left .all .notes .list-notes .note .n-subject .n-right:hover{
+  color: #c208a3;
+}
+#main .left .all .notes .list-notes .note .n-subject .n-left a{
+  color: #636363;
+  margin-left: 5px;
+}
+#main .left .all .notes .list-notes .note .n-subject .n-left a:hover{
+  color: red;
+}
+#main .left .all .notes .list-notes .note .n-subject .n-right i{
+  vertical-align: middle;
+}
+#main .left .all .notes .list-notes .note .n-subject .n-right i.show{
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+#main .left .all .notes .list-notes .note .n-subject .n-left img{
+  max-width: 25px;
+  border-radius: 50%;
+  vertical-align: text-bottom;
+}
+#main .left .all .notes .list-notes .note .n-subject .n-left .date{
+  font-size: 10px;
+}
+#main .left .all .notes .list-notes .note .n-content{
+  padding: 10px;
+  text-align: justify;
+  font-size: 12px;
+  display: none;
+  white-space: pre-line;
+}
+#main .left .all .notes .list-notes .note .n-content p{
+  margin-bottom: 5px;
+}
+#main .left .all #new-note{
+  max-width: 500px;
+  max-height: 300px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background: #ffffff;
+  border-radius: 10px;
+  display: none;
+  z-index: 999999;
+  padding: 15px;
+}
+#main .left .all #new-note .note-content input[type=text],#main .left .all #new-note .note-content textarea{
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  color: #333333;
+  width: 100%;
+  outline: 0;
+}
+#main .left .all #new-note .note-content input[type=text]{
+  background: #f5f5f5;
+}
+#main .left .all #new-note .note-content textarea{
+  background: #f9fed5;
+  resize: none;
+  text-align: justify;
+}
+#main .left .all #new-note .note-content .note-footer{
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+#main .left .all #new-note .note-content .note-footer p{
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main .left .all #new-note .note-content .note-footer p input[type=radio]{
+  display: none;
+}
+#main .left .all #new-note .note-content .note-footer p label{
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  cursor: pointer;
+  position: relative;
+}
+#main .left .all #new-note .note-content .note-footer p label[for=color1]{
+  background: #cdfaba;
+}
+#main .left .all #new-note .note-content .note-footer p label[for=color2]{
+  background: #fcd2ff;
+}
+#main .left .all #new-note .note-content .note-footer p label[for=color3]{
+  background: #c3f5f9;
+}
+#main .left .all #new-note .note-content .note-footer p label[for=color4]{
+  background: #f8ef9d;
+}
+#main .left .all #new-note .note-content .note-footer p label i{
+  top: 0;
+  font-size: 10px;
+  color: #333;
+  right: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#main .left .all #new-note .note-content input[type=submit]{
+  font-size: 12px;
+}
+#main .left .all #new-note .note-content input[type=submit]:hover{
+  box-shadow: 2px 2px 10px rgba(0,0,0,.25);
+}
+.nice-select{
+  font-size: 12px;
+  padding-right: 0;
+  width: 100%;
+}
+#main .left .all #new-note .nice-select{
+  padding-right: 28px;
+  margin-right: 5px;
+}
+.nice-select.open .nice-select-dropdown{
+  background: #ffffff;
+  width: 100%;
+}
+.nice-select .option{
+  padding: 0 !important;
+  text-align: center;
+}
+.nice-select .list{
+  margin: 0;
+}
+/*all tickets page*/
+#main .left .all-ticket{
+  flex-direction: column;
+}
+#main .left .all-ticket .content-ticket{
+  padding: 0 !important;
+}
+#main .left .all-ticket .content-ticket::-webkit-scrollbar{
+  width:5px;
+}
+#main .left .all-ticket .content-ticket::-webkit-scrollbar-thumb {
+    background: #1c1878;
+    border-radius: 30px;
+}
+#main .left .all-ticket .tickets{
+  width:100%;
+}
+#main .left .all-ticket .create-ticket{
+  margin-bottom: 15px;
+}
+#main .left .all-ticket .create-ticket a{
+  padding: 8px 25px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  background: rgb(33 41 105);
+  background: linear-gradient(  180deg, rgba(26,17,124,1) 0%, rgb(33 41 105) 100%);
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+}
+#main .left .all-ticket .create-ticket a:hover{
+  background: #e28e07;
+}
+#main .left .all-ticket .create-ticket a i{
+  vertical-align: middle;
+}
+#main .left .all-ticket .filter-tickets{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 15px 0;
+}
+#main .left .all-ticket .filter-tickets .filter{
+  width: calc(96% / 6);
+}
+#main .left .all-ticket .filter-tickets .filter .box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main .left .all-ticket .filter-tickets .filter h3{
+  font-size: 13px;
+}
+#main .left .all-ticket .filter-tickets .filter .nice-select{
+  border:0;
+  text-align: right !important;
+  padding-right: 8px !important;
+}
+#main .timer-box .nice-select,#main .left .all .tickets .content-ticket .info-ticket li p .nice-select{
+  text-align: right !important;
+  padding-right: 8px !important;
+}
+#main .left .all-ticket .filter-tickets .filter .nice-select::after,#main .timer-box .nice-select::after{
+  right:auto !important;
+  left:15px;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p .nice-select::after{
+  left: 8px;
+  right:auto !important;
+}
+#main .left .all-ticket .filter-tickets .filter .nice-select .option,#main .timer-box .nice-select .option{
+  font-weight: normal !important;
+}
+#main .left .all-ticket .filter-tickets .filter .nice-select .option:hover,#main .left .all-ticket .filter-tickets .filter .nice-select .option.focus, .nice-select .option.selected.focus{
+  background: #1b1578;
+  color: #fff;
+}
+#main .left .all-ticket .filter-tickets .filter input{
+  width: 100%;
+  height: 38px;
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-size: 12px;
+  outline: 0;
+}
+#main .left .all-ticket .tickets .title{
+  background: #f8fbd1 !important;
+  position: sticky;
+  top: 0;
+}
+#main .left .all-ticket-tb{
+  white-space: nowrap;
+}
+#main .left .all-ticket-tb thead{
+  font-size: 12px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+#main .left .all-ticket-tb thead th{
+  padding: 8px 5px;
+}
+#main .left .all-ticket-tb tbody tr td{
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 5px;
+}
+#main .left .all-ticket-tb tbody tr td.ticket-action{
+  justify-content: space-around;
+}
+#main .left .all-ticket-tb tbody tr td.open{
+  color:green;
+}
+#main .left .all-ticket-tb tbody tr td.close{
+  color:red;
+}
+#main .left .all-ticket-tb thead tr th[id]{
+  cursor: pointer;
+}
+#main .left .all-ticket-tb thead tr th[id]:hover i{
+  color:red;
+}
+#main .left .all-ticket-tb tbody tr td.subject-ticket{
+  /* max-width: 85px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+#main .left .all-ticket-tb tbody tr td.subject-ticket a:hover{
+  text-decoration: underline;
+  color: #070159;
+}
+#main .left .all-ticket-tb tbody tr.over{
+  background: #f9d9cf;
+}
+#main .left .all-ticket-tb tbody tr.pend{
+  background: orange;
+}
+#main .left .all-ticket .filter-shape .filter{
+  width:calc(96% / 5);
+}
+#main .left .all-ticket .filter-shape .filter input,#main .left .all-ticket .filter-shape .filter:first-child .nice-select{
+  margin-left: 5px;
+}
+/* all ticket time style page*/
+#main .left .ticket-time .tickets{
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+}
+#main .left .all-ticket-time{
+  white-space: nowrap;
+}
+#main .left .all-ticket-t .time-header ul{
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 4.7% 10% 10% 10% 10% 10% 31% 10% 4.3%;
+  width: 100%;
+  background: #ddd;
+  border-radius: 5px;
+}
+#main .left .all-ticket-t .time-header ul li{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  padding: 5px 10px;
+  position: relative;
+}
+#main .left .all-ticket-t .time-header ul li:first-child{
+  min-width: 32px;
+}
+#main .left .all-ticket-t .time-header ul li:last-child{
+  background: orange;
+  color: #fff;
+  border-radius: 5px 0 0 5px;
+  min-width: 44px;
+}
+#main .left .all-ticket-t .time-header ul li span{
+  position: absolute;
+  left: -20px;
+  top: 2px;
+  color: orange;
+  transform: rotate(-90deg) translateY(-1px) translateX(-4px);
+  font-size: 10px;
+}
+#main .left .all-ticket-t .time-main{
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  margin-top: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#main .left .all-ticket-t .time-main .right-t{
+  width: calc(100% - 46px);
+  background: #fff;
+  border-radius: 3px 0 0 3px;
+  margin-left: -2px;
+  z-index: 2;
+  padding: 15px 0;
+  position: relative;
+}
+#main .left .all-ticket-t .time-main .right-t .desc{
+  position: absolute;
+  width:100%;
+  background: rgba(0,0,0,0.7);
+  font-size: 12px;
+  color: #fff;
+  padding: 3px;
+  right: 0;
+  top: 0;
+}
+#main .left .all-ticket-t .time-main .right-t ul{
+  display: grid;
+  grid-template-columns: 4% 10% 10% 10% 10% 10% 35% 9%;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+#main .left .all-ticket-t .time-main .right-t ul li{
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+  text-align: right;
+  padding: 5px 10px;
+  white-space: nowrap;
+  color: #636363;
+}
+#main .left .all-ticket-t .time-main .right-t ul li.description{
+  overflow: hidden;
+}
+#main .left .all-ticket-t .time-main .right-t ul li:first-child{
+  text-align: center;
+}
+#main .left .all-ticket-t .time-main .right-t ul li:last-child{
+  text-align: center;
+}
+#main .left .all-ticket-t .time-main .left-t{
+  width: 48px;
+  padding: 10px;
+  background: #1927c5;
+  color: #fff;
+  align-items: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

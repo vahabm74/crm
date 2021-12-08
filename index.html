@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <title>مدیریت پروژه افروز وب</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body class="project">
+    <div id="main">
+      <!-- begin right sidebar-->
+      <div class="right">
+        <!-- begin right sidebar header-->
+        <div class="header">
+          <!-- begin logo sidebar -->
+          <h1>
+            افروز وب
+            <a href="#!">
+              <img src="assets/images/logo.png" alt="مدیریت پروژه افروز وب" title="مدیریت پروژه افروز وب" class="img-fluid">
+            </a>
+          </h1>
+          <!-- begin colapse button -->
+          <img src="assets/images/right-arrow.png" alt="" title="" class="img-fluid colapse">
+        </div>
+        <!-- begin profile box -->
+        <div class="profile">
+          <div class="avatar">
+            <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+          </div>
+          <div class="name">
+            <p>وهاب محمدی</p>
+            <span>فرانت اند</span>
+          </div>
+        </div>
+        <!-- begin navbar -->
+        <div class="main-menu">
+          <ul>
+            <li>
+              <i class="fas fa-layer-group"></i>
+              <a href="#!">داشبورد</a>
+            </li>
+            <li class="active">
+              <i class="fas fa-server"></i>
+              <a href="#!">پروژه ها</a>
+            </li>
+            <li>
+              <i class="fas fa-list-alt"></i>
+              <a href="#!">کارهای من</a>
+            </li>
+            <li>
+              <i class="fas fa-receipt"></i>
+              <a href="#!">تیکت ها</a>
+            </li>
+            <li>
+              <i class="fas fa-fingerprint"></i>
+              <a href="#!">پروفایل</a>
+            </li>
+          </ul>
+        </div>
+        <!-- begin loguat button-->
+        <a href="#!" class="logout">خروج از حساب کاربری</a>
+      </div>
+      <!-- begin left sidebar -->
+      <div class="left detail-project">
+          <div class="overlay"></div>
+        <div class="header-section">
+          <div class="header">
+            <!-- begin breadcrumbs-->
+            <div class="breadcrumbs">
+              <ul>
+                <li>
+                  <a href="#!">داشبورد</a>
+                  <i class="fas fa-angle-left"></i>
+                </li>
+                <li>
+                  <a href="#!">پروژه ها</a>
+                  <i class="fas fa-angle-left"></i>
+                </li>
+                <li class="current">
+                  <a>تعمیراتو</a>
+                </li>
+              </ul>
+            </div>
+            <!-- begin notification-->
+            <div class="notification">
+              <ul>
+                <li>
+                  <a href="#!">
+                    <i class="fas fa-search"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <i class="far fa-bell"></i>
+                    <!-- if has notification this 'span' tag will be show-->
+                    <span class="ifhas"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- begin items-->
+          <div class="items">
+            <div class="box project-name">
+              <img src="assets/images/pr-name.png" alt="" title="" class="img-fluid">
+              <h2>وب سایت تعمیراتو
+                <i class="fas fa-angle-down"></i>
+              </h2>
+              <div class="details">
+                <p class="suggested-fee">
+                  <span class="name">هزینه پیشنهادی</span>
+                  <span class="value">۲ میلیون تومان</span>
+                </p>
+                <p class="agreed-fee">
+                  <span class="name">هزینه توافق شده</span>
+                  <span class="value">۲ میلیون تومان</span>
+                </p>
+                <p class="contract-file">
+                  <span class="name">فایل قرارداد</span>
+                  <span class="value">
+                    <!-- if has file a tag has class file else has class nofile-->
+                    <a href="#!" class="file" download>دانلود</a>
+                  </span>
+                </p>
+                <p class="seo-link">
+                  <span class="name">لینک آنالیز سئو</span>
+                  <span class="value">
+                    <!-- if has file a tag has class file else has class nofile-->
+                    <a class="nofile">ندارد</a>
+                  </span>
+                </p>
+                <p class="doc-link">
+                  <span class="name">لینک داکیومنت پروژه</span>
+                  <span class="value">
+                    <!-- if has file a tag has class file else has class nofile-->
+                    <a class="nofile">ندارد</a>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="box customer-info">
+              <img src="assets/images/customer.png" alt="" title="" class="">
+              <h2>مشخصات مشتری
+                <i class="fas fa-angle-down"></i>
+              </h2>
+              <div class="details">
+                <p class="customer-name">
+                  <span class="name">نام و نام خانوادگی</span>
+                  <span class="value">محمد عادلیان</span>
+                </p>
+                <p class="customer-phone">
+                  <span class="name">شماره تماس</span>
+                  <span class="value">۰۹۱۲۲۲۲۱۵۴۱</span>
+                </p>
+                <p class="customer-email">
+                  <span class="name">آدرس ایمیل</span>
+                  <span class="value">info@example.com</span>
+                </p>
+              </div>
+            </div>
+            <div class="box project-deadline">
+              <img src="assets/images/calendar.png" alt="" title="" class="">
+              <h2>تاریخ شروع و پایان پروژه
+                <i class="fas fa-angle-down"></i>
+              </h2>
+              <div class="details">
+                <p class="start-date">
+                  <span class="name">تاریخ شروع پروژه
+                    <span class="edit">ویرایش</span>
+                  </span>
+                  <span class="value">۱۴۰۰/۰۷/۰۲</span>
+                </p>
+                <p class="end-date">
+                  <span class="name">تاریخ پایان پروژه
+                    <span class="edit">ویرایش</span>
+                  </span>
+                  <span class="value">۱۴۰۰/۰۷/۲۳</span>
+                </p>
+              </div>
+            </div>
+            <div class="box project-status">
+              <h2 class="project-name">وضعیت
+                <i class="fas fa-angle-down"></i>
+              </h2>
+              <span>doing</span>
+            </div>
+          </div>
+        </div>
+        <!--begin overflow box -->
+        <div class="main-section">
+          <!-- begin steps of project-->
+          <div class="steps">
+            <div class="title">
+              <img src="assets/images/steps.png" alt="گام های پروژه" title="گام های پروژه" class="img-fluid">
+              <h3>
+                گام های پروژه
+              </h3>
+            </div>
+            <div class="content">
+              <ul>
+                <!-- li tag has three classes : done - doing - pending
+                  every class has specific background color and specific status
+                -->
+                <li class="done">
+                  <span class="number-step">۱</span>
+                  <h4 class="name-step">پیاده سازی قالب</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Done</span>
+                  </p>
+                </li>
+                <li class="done">
+                  <span class="number-step">۲</span>
+                  <h4 class="name-step">بررسی اصلاحات مشتری</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Done</span>
+                  </p>
+                </li>
+                <li class="doing">
+                  <span class="number-step">۳</span>
+                  <h4 class="name-step">آموزش کار با وبسایت</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Doing</span>
+                  </p>
+                </li>
+                <li class="doing">
+                  <span class="number-step">۴</span>
+                  <h4 class="name-step">طراحی اولیه</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Doing</span>
+                  </p>
+                </li>
+                <li class="pending">
+                  <span class="number-step">۵</span>
+                  <h4 class="name-step">اصلاحیه طرح</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Pending</span>
+                  </p>
+                </li>
+                <li class="pending">
+                  <span class="number-step">۶</span>
+                  <h4 class="name-step">اصلاحیه طرح</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Pending</span>
+                  </p>
+                </li>
+                <li class="pending">
+                  <span class="number-step">۷</span>
+                  <h4 class="name-step">اصلاحیه طرح</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Pending</span>
+                  </p>
+                </li>
+                <li class="pending">
+                  <span class="number-step">۸</span>
+                  <h4 class="name-step">اصلاحیه طرح</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Pending</span>
+                  </p>
+                </li>
+                <li class="pending">
+                  <span class="number-step">۹</span>
+                  <h4 class="name-step">اصلاحیه طرح</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Pending</span>
+                  </p>
+                </li>
+                <li class="pending">
+                  <span class="number-step">۱۰
+                  </span>
+                  <h4 class="name-step">اصلاحیه طرح</h4>
+                  <p class="begin-step">
+                    <span>شروع</span>
+                    <span class="begin-step-date">۱۴۰۰/۰۷/۱۰</span>
+                  </p>
+                  <p class="end-step">
+                    <span>پایان</span>
+                    <span class="end-step-date">۱۴۰۰/۰۷/۱۷</span>
+                  </p>
+                  <p class="status-step">
+                    <span>وضعیت</span>
+                    <span class="check-status-step">Pending</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- begin section tickets and users-->
+          <section class="all">
+            <!-- begin tickets box-->
+            <div class="tickets">
+              <div class="title">
+                <img src="assets/images/ticket.png" alt="تیکت های پشتیبانی" title="تیکت های پشتیبانی" class="img-fluid">
+                <h3>تیکت های پشتیبانی</h3>
+              </div>
+              <div class="content">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>عنوان تیکت</th>
+                      <th>تسک</th>
+                      <th id="status-ticket">وضعیت تیکت
+                        <i class="fas fa-sort"></i>
+                      </th>
+                      <th id="answers-ticket">پاسخ ها
+                        <i class="fas fa-sort"></i>
+                      </th>
+                      <th id="dates-ticket">تاریخ آخرین به روزرسانی
+                        <i class="fas fa-sort"></i>
+                      </th>
+                      <th id="priorities-ticket">اولویت
+                        <i class="fas fa-sort"></i>
+                      </th>
+                      <th>عملیات</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Every ticket has two classes : if Tickets on deadline has Class 'over' else if onwork has Class 'now' else pend has class 'pend'-->
+                    <tr class="over">
+                      <!-- Note : Whene user hover on ticket-subjec title wwill be show after title box automatic-->
+                      <td class="ticket-subject">
+                        <a href="#!">  بررسی طرح ارسالی توسط خانوم حسینی و رد یا تایید آن</a>
+                      </td>
+                      <td class="ticket-task">مارکتینگ وبسایت</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status open">باز</td>
+                      <td class="ticket-answer">۰</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۱۷</td>
+                      <td class="ticket-priority">مهم</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket done">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="now">
+                      <td class="ticket-subject">
+                        <a href="#!">تیکت دوم</a>
+                      </td>
+                      <td class="ticket-task">طراحی عکس های خانم حسینی</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-answer">۲</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۱۶</td>
+                      <td class="ticket-priority">مهم</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket done">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="pend">
+                      <td class="ticket-subject">
+                        <a href="#!">
+                          تیکت دوم
+                        </a>
+                      </td>
+                      <td class="ticket-task">طراحی عکس های خانم حسینی</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-answer">۳</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۰۶</td>
+                      <td class="ticket-priority">عادی</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="over">
+                      <td class="ticket-subject">
+                        <a href="#!">
+                          تیکت دوم
+                        </a>
+                      </td>
+                      <td class="ticket-task">طراحی عکس های خانم حسینی</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-answer">۵</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۰۳</td>
+                      <td class="ticket-priority">مهم</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket done">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="over">
+                      <td class="ticket-subject">
+                        <a href="#!">
+                          تیکت دوم
+                        </a>
+                      </td>
+                      <td class="ticket-task">طراحی عکس های خانم حسینی</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-answer">۰</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۱۵</td>
+                      <td class="ticket-priority">عادی</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket done">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="over">
+                      <td class="ticket-subject">
+                        <a href="#!">
+                          تیکت دوم
+                        </a>
+                      </td>
+                      <td class="ticket-task">طراحی عکس های خانم حسینی</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-answer">۱</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۲۰</td>
+                      <td class="ticket-priority">مهم</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="over">
+                      <td class="ticket-subject">
+                        <a href="#!">
+                          تیکت دوم
+                        </a>
+                      </td>
+                      <td class="ticket-task">طراحی عکس های خانم حسینی</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-answer">۲</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۰۹</td>
+                      <td class="ticket-priority">مهم</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket done">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="now">
+                      <td class="ticket-subject">
+                        <a href="#!">
+                          تیکت دوم
+                        </a>
+                      </td>
+                      <td class="ticket-task">طراحی عکس های خانم حسینی</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-answer">۲</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۰۸</td>
+                      <td class="ticket-priority">عادی</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="now">
+                      <td class="ticket-subject">
+                        <a href="#!">
+                          تیکت دوم
+                        </a>
+                      </td>
+                      <td class="ticket-task">طراحی عکس های خانم حسینی</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-answer">۲</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۱۲</td>
+                      <td class="ticket-priority">عادی</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket done">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="now">
+                      <td class="ticket-subject">
+                        <a href="#!">
+                          تیکت دوم
+                        </a>
+                      </td>
+                      <td class="ticket-task">طراحی عکس های خانم حسینی</td>
+                      <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
+                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-answer">۲</td>
+                      <td class="ticket-last-update">۱۴۰۰/۰۷/۱۰</td>
+                      <td class="ticket-priority">مهم</td>
+                      <td class="ticket-action">
+                        <!-- done-ticket has two classes - if is done has class done else has class pending-->
+                        <a href="#!" class="done-ticket">
+                          <i class="fas fa-check"></i>
+                        </a>
+                        <a href="#!" class="remove-ticket">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- begin users box-->
+            <div class="users">
+              <div class="title">
+                <img src="assets/images/users.png" alt="کارکنان پروژه" title="کارکنان پروژه" class="img-fluid">
+                <h3>
+                  کارکنان پروژه
+                </h3>
+              </div>
+              <div class="content">
+                <ul>
+                  <li>
+                    <img src="assets/images/vahab.jpg" alt="وهاب محمدی" title="وهاب محمدی" class="img-fluid">
+                    <p class="username">
+                      <span>وهاب محمدی</span>
+                      <span>برنامه نویس</span>
+                    </p>
+                    <a href="#!">کل تسک ها</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/vahab.jpg" alt="وهاب محمدی" title="وهاب محمدی" class="img-fluid">
+                    <p class="username">
+                      <span>وهاب محمدی</span>
+                      <span>برنامه نویس</span>
+                    </p>
+                    <a href="#!">کل تسک ها</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/vahab.jpg" alt="وهاب محمدی" title="وهاب محمدی" class="img-fluid">
+                    <p class="username">
+                      <span>وهاب محمدی</span>
+                      <span>برنامه نویس</span>
+                    </p>
+                    <a href="#!">کل تسک ها</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/vahab.jpg" alt="وهاب محمدی" title="وهاب محمدی" class="img-fluid">
+                    <p class="username">
+                      <span>وهاب محمدی</span>
+                      <span>برنامه نویس</span>
+                    </p>
+                    <a href="#!">کل تسک ها</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/vahab.jpg" alt="وهاب محمدی" title="وهاب محمدی" class="img-fluid">
+                    <p class="username">
+                      <span>وهاب محمدی</span>
+                      <span>برنامه نویس</span>
+                    </p>
+                    <a href="#!">کل تسک ها</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!--Start set timer btn -->
+      <a href="#!" class="set-timer start">
+        <i class="fas fa-play"></i>
+      </a>
+      <!--start btn stop timer-->
+      <a href="#!" class="set-timer-end">
+        <i class="fas fa-stop"></i>
+        <span class="counter">
+          <!-- <span id="minutes"></span>:
+          <span id="seconds"></span> -->
+        </span>
+      </a>
+      <!-- Start form timer box-->
+      <div class="timer-box">
+        <h2>
+          جزییات تسک شما
+          <i class="far fa-window-close"></i>
+        </h2>
+        <form class="form-timer">
+          <p class="form-item">
+            <label for="project-n">پروژه</label>
+            <select class="project-n" name="project-n" id="project-n">
+              <option value="">فیکستی من</option>
+              <option value="">تعمیراتو</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-t">تیکت</label>
+            <select class="project-t" name="project-t" id="project-t">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-task">نوع تسک</label>
+            <select class="project-task" name="project-task" id="project-task">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="description">توضیحات</label>
+            <textarea name="description" id="description" rows="4s" cols="80"></textarea>
+          </p>
+          <p class="form-item">
+            <input type="submit" name="submit" value="ذخیره">
+          </p>
+          <!--value of 'savetime' input dynamically filled when user click to stop timer-->
+          <input type="hidden" name="savetime" value="" class="savetime">
+        </form>
+      </div>
+    </div>
+  <!-- js files -->
+  <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/sort.js"></script>
+  <script type="text/javascript" src="assets/js/nice-select2.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
+</html>

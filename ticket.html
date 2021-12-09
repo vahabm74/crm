@@ -128,13 +128,15 @@
         </div>
         <!-- begin main ticket box -->
         <div class="all">
-          <div class="tickets">
+          <div class="tickets ticket-w">
             <div class="title">
               <img src="assets/images/ticket.png" alt="عنوان تیکت" title="عنوان تیکت" class="img-fluid">
               <h3>بررسی erp و api سایت</h3>
               <a href="#!" class="new-ticket">
                 تاریخچه تیکت
               </a>
+              <a href="#!" class="new-note">
+                لیست نوت ها</a>
               <a href="#!" class="new-reply">
                 <i class="fas fa-plus"></i>
                 پاسخ جدید
@@ -443,11 +445,10 @@
           <!-- begin notes box-->
           <div class="notes">
             <div class="title">
-              <h3>نوت ها</h3>
-              <a href="#!">
-                <i class="fas fa-plus"></i>
-                نوت جدید
-              </a>
+              <h3>
+                <i class="far fa-window-close"></i>
+                نوت ها</h3>
+              <a href="#!">نوت جدید</a>
             </div>
             <div class="list-notes">
               <!--every note has data 'data-bgcolor' that gett from checkbox color selector-->
@@ -546,7 +547,7 @@
             <i class="far fa-window-close"></i>
             <div class="note-h">
               <p>
-                نوت جدید
+                نت جدید
               </p>
               <p>
                 ۱۴۰۰/۰۷/۲۲
@@ -557,18 +558,7 @@
               <textarea name="note-text" rows="6" cols="80" placeholder="متن نوت"></textarea>
               <div class="note-footer">
                 <p>
-                  <span class="name">
-                    نوشته شده توسط :
-                  </span>
-                  <span class="value">
-                    <select class="note-username" name="note-username" id="note-username">
-                      <option value="" selected>وهاب محمدی</option>
-                      <option value="">زهرا نخئی</option>
-                    </select>
-                  </span>
-                </p>
-                <p>
-                  <span class="name">رنگ نوت :</span>
+                  <span class="name">رنگ نت :</span>
                   <span class="value">
                     <!-- after click on label 'textarea' has 'data-color' width code color value-->
                     <input type="radio" name="note-color" value="#cdfaba" id="color1">

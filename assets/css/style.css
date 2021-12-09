@@ -646,6 +646,9 @@ body{
   overflow: hidden;
   background: #fff;
 }
+#main .left .all .tickets.ticket-w{
+  width: 100%;
+}
 #main .left .all .tickets .title{
   display: flex;
   align-items: center;
@@ -830,11 +833,21 @@ body{
   top: 5px;
   font-size: 10px;
 }
-#main .left .all .tickets .title .new-ticket:hover{
+#main .left .all .tickets .title .new-note{
+  position: absolute;
+  left: 78px;
+  top: 5px;
+  font-size: 10px;
+  color: #fff;
+  background: #070159;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+#main .left .all .tickets .title .new-ticket:hover,#main .left .all .tickets .title .new-note:hover{
   text-decoration: underline;
   color:#ffc107;
 }
-#main .left .all .tickets .title .new-ticket i{
+#main .left .all .tickets .title .new-ticket i,#main .left .all .tickets .title .new-note i{
   font-size: 7px;
   vertical-align: middle;
 }
@@ -1241,10 +1254,15 @@ body{
   background: #fff;
 }
 #main .left .all .notes{
-  width: 28%;
-  background: #fff;
-  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  position: fixed;
+  left: 10px;
+  z-index: 10;
   border-radius: 5px;
+  overflow: hidden;
+  width: 300px;
+  display:none;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 #main .left .all .notes .title,#main .left .all .tickets .content-ticket .history-ticket .title{
   display: flex;
@@ -1272,6 +1290,14 @@ body{
   margin: 0;
   font-size: 14px;
 }
+#main .left .all .notes .title h3 i{
+  vertical-align: middle;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#main .left .all .notes .title h3 i:hover{
+  color:red;
+}
 #main .left .all .notes .title a{
   font-size: 12px;
   color: #212969;
@@ -1281,7 +1307,7 @@ body{
 }
 #main .left .all .notes .list-notes{
   padding: 15px;
-  max-height: 100vh;
+  max-height: 400px;
   overflow: auto;
 }
 #main .left .all .notes .list-notes::-webkit-scrollbar,#main .left .all .tickets .content-ticket .history-ticket tbody::-webkit-scrollbar{

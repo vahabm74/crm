@@ -85,7 +85,12 @@ jQuery(document).ready(function($) {
       $('#main .left .overlay').fadeIn();
       $('#main .left .all #new-note').fadeIn(200);
     });
-
+    $('#main .left .all .tickets .title .new-note').click(function() {
+      $('#main .left .all .notes').fadeIn(200);
+    });
+    $('#main .left .all .notes .title h3 i').click(function() {
+      $('#main .left .all .notes').fadeOut(200);
+    });
     //Check color note
     $('#main .left .all #new-note .note-content .note-footer p label').click(function() {
       $('#main .left .all #new-note .note-content .note-footer p label').html('');

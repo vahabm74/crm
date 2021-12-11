@@ -1086,7 +1086,7 @@ body{
   background: #fff;
   max-width: 600px;
   margin: auto;
-  max-height: 325px;
+  max-height: 500px;
   box-shadow: 0 0 10px rgb(0 0 0 / 20%);
   border-radius: 10px;
   display: none;
@@ -1164,6 +1164,16 @@ body{
   border:none;
   outline: 0;
   resize: none;
+}
+#main .left .all .tickets .content-ticket #reply .all-text-reply{
+  margin-bottom: 10px;
+}
+#main .left .all .tickets .content-ticket #reply .all-text-reply .trumbowyg-box{
+  max-height: 320px;
+}
+#main .left .all .tickets .content-ticket #reply .all-text-reply .trumbowyg-editor{
+  direction: rtl;
+  min-height: 245px;
 }
 #main .left .all .tickets .content-ticket #reply .reply-action{
   display: flex;
@@ -1378,7 +1388,7 @@ body{
 }
 #main .left .all #new-note{
   max-width: 500px;
-  max-height: 300px;
+  max-height: 400px;
   position: fixed;
   right: 0;
   left: 0;
@@ -1401,6 +1411,15 @@ body{
   color: #333333;
   width: 100%;
   outline: 0;
+}
+#main .left .all #new-note .note-content .trumbowyg-box {
+  min-height: 200px;
+  max-height: 262px;
+  margin-bottom: 10px;
+}
+#main .left .all #new-note .note-content .trumbowyg-box .trumbowyg-editor{
+  min-height: 185px;
+  direction: rtl;
 }
 #main .left .all #new-note .note-content input[type=text]{
   background: #f5f5f5;

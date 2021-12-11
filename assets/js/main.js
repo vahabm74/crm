@@ -103,7 +103,7 @@ jQuery(document).ready(function($) {
       });
       $('#main .left .all #new-note .note-content .note-footer p label').click(function () {
         let id = $(this).attr('data-color');
-        $('#main .left .all #new-note .note-content textarea').css({'background':id});
+        $('#main .left .all #new-note .note-content textarea,#main .left .all #new-note .note-content .trumbowyg-box .trumbowyg-editor').css({'background':id});
         $('#main .left .all #new-note .note-content textarea').attr('data-color',id);
       });
     //new select box style
@@ -218,4 +218,9 @@ jQuery(document).ready(function($) {
     $('#main .left .header .notification > ul li').click(function(){
       $('#main .left .header .notification .notif-box').slideToggle(200);
     });
+    //new texteditor jquery
+    if($('.new-reply').length !== 0){
+      $('#reply-text').trumbowyg();
+      $('#note-text').trumbowyg();
+    }
 });

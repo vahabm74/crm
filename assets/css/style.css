@@ -1114,6 +1114,8 @@ body{
 }
 #main .left .all .tickets .content-ticket #reply .reply-info{
   margin-bottom: 10px;
+  position: relative;
+  z-index: 99;
 }
 #main .left .all .tickets .content-ticket #reply .reply-info > ul{
   padding: 0;

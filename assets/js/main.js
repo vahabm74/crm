@@ -269,4 +269,8 @@ jQuery(document).ready(function($) {
        ]
       });
     }
+    //Close alert profile
+    $('#main .left .profile .profile-content .alert-profile i:last-child').click(function() {
+      $(this).closest('.alert-profile').hide(200);
+    });
 });

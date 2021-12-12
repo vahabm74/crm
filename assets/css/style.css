@@ -1177,6 +1177,21 @@ body{
   direction: rtl;
   min-height: 245px;
 }
+.trumbowyg-modal{
+  z-index: 9999999 !important;
+}
+.trumbowyg-dropdown-backColor button,.trumbowyg-dropdown-foreColor button{
+  font-size: 0;
+}
+#reply .trumbowyg-dropdown-formatting {
+  left:441px !important;
+}
+#reply .trumbowyg-dropdown-foreColor{
+  left: 300px !important;
+}
+#new-note .trumbowyg-dropdown-formatting{
+  left: 334px !important;
+}
 #main .left .all .tickets .content-ticket #reply .reply-action{
   display: flex;
   justify-content: flex-end;

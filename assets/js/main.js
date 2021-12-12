@@ -220,7 +220,53 @@ jQuery(document).ready(function($) {
     });
     //new texteditor jquery
     if($('.new-reply').length !== 0){
-      $('#reply-text').trumbowyg();
-      $('#note-text').trumbowyg();
+      $('#reply-text').trumbowyg({
+        btnsDef: {
+           // Create a new dropdown
+           image: {
+               dropdown: ['insertImage', 'base64'],
+               ico: 'insertImage'
+           }
+       },
+       // Redefine the button pane
+       btns: [
+           ['viewHTML'],
+           ['formatting'],
+           ['strong', 'em'],
+           ['link'],
+           ['image'], // Our fresh created dropdown
+           ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+           ['unorderedList', 'orderedList'],
+           ['horizontalRule'],
+           ['removeformat'],
+           ['fullscreen'],
+           ['foreColor', 'backColor'],
+           ['highlight']
+       ]
+      });
+      $('#note-text').trumbowyg({
+        btnsDef: {
+           // Create a new dropdown
+           image: {
+               dropdown: ['insertImage', 'base64'],
+               ico: 'insertImage'
+           }
+       },
+       // Redefine the button pane
+       btns: [
+           ['viewHTML'],
+           ['formatting'],
+           ['strong', 'em'],
+           ['link'],
+           ['image'], // Our fresh created dropdown
+           ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+           ['unorderedList', 'orderedList'],
+           ['horizontalRule'],
+           ['removeformat'],
+           ['fullscreen'],
+           ['foreColor', 'backColor'],
+           ['highlight']
+       ]
+      });
     }
 });

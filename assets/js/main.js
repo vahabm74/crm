@@ -178,6 +178,11 @@ jQuery(document).ready(function($) {
         searchable: false,
       });
     }
+    if($('#connection-address').length !== 0){
+      NiceSelect.bind(document.getElementById("connection-way"),{
+        searchable: false,
+      });
+    }
     //ticket time hover description
     $('#main .left .all-ticket-t .time-main .right-t ul li.description').hover(function() {
       let txt = $(this).text();

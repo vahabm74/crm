@@ -1971,7 +1971,7 @@ body{
   font-size: 13px;
   color: #636363;
 }
-#main .left .profile .profile-content .fprofile .right-form .form-item input{
+#main .left .profile .profile-content .fprofile .right-form .form-item input,#main .left .profile .profile-content .fprofile .right-form .form-item .nice-select{
   width: 61%;
   border: none;
   background: #f5f5f5;
@@ -1979,6 +1979,15 @@ body{
   border-radius: 5px;
   outline: 0;
   font-size: 12px;
+}
+#main .left .profile .profile-content .fprofile .right-form .form-item .nice-select{
+  line-height: 29px !important;
+  text-align: right !important;
+  padding-right: 10px !important;
+}
+#main .left .profile .profile-content .fprofile .right-form .form-item .nice-select::after{
+  right: auto !important;
+  left: 15px;
 }
 #main .left .profile .profile-content .fprofile .right-form .form-item small{
   position: absolute;

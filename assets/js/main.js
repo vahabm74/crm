@@ -274,8 +274,35 @@ jQuery(document).ready(function($) {
        ]
       });
     }
+    if($('.fprofile').length !== 0){
+      $('#user-request').trumbowyg({
+        btnsDef: {
+           // Create a new dropdown
+           image: {
+               dropdown: ['insertImage', 'base64'],
+               ico: 'insertImage'
+           }
+       },
+       // Redefine the button pane
+       btns: [
+           ['viewHTML'],
+           ['formatting'],
+           ['strong', 'em'],
+           ['link'],
+           ['image'], // Our fresh created dropdown
+           ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+           ['unorderedList', 'orderedList'],
+           ['horizontalRule'],
+           ['removeformat'],
+           ['fullscreen'],
+           ['foreColor', 'backColor'],
+       ]
+      });
+    }
     //Close alert profile
     $('#main .left .profile .profile-content .alert-profile i:last-child').click(function() {
       $(this).closest('.alert-profile').hide(200);
     });
+    //show required start on the label
+    $('.form-item .rq').append('<span class="star">*</span>');
 });

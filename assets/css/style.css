@@ -2049,3 +2049,31 @@ body{
 #main .left .profile .profile-content .show-connection table tr td a:hover{
   color:orange;
 }
+#main .left .profile .user-info .fprofile{
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#main .left .profile .user-info .fprofile .right-form,#main .left .profile .user-info .fprofile .left-form{
+  width: 100%;
+}
+#main .left .profile .user-info .fprofile .right-form .form-item{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#main .left .profile .user-info .fprofile .right-form .form-item label{
+  width: 100%;
+  margin-bottom: 8px;
+}
+#main .left .profile .user-info .fprofile .right-form .form-item label.rq .star{
+  font-size: 14px;
+  color: red;
+  margin-right: 5px;
+}
+#main .left .profile .user-info .fprofile .right-form .form-item input{
+  width: 100%;
+}
+#main .left .profile .user-info .fprofile .right-form .form-item small{
+  position: static;
+}

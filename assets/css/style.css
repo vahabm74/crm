@@ -2077,3 +2077,6 @@ body{
 #main .left .profile .user-info .fprofile .right-form .form-item small{
   position: static;
 }
+#main .left .profile .show-contract table{
+  font-size: 12px;
+}

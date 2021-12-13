@@ -2043,3 +2043,9 @@ body{
   font-size: 13px;
   padding: 5px 17px;
 }
+#main .left .profile .profile-content .show-connection table tr td a{
+  color:red;
+}
+#main .left .profile .profile-content .show-connection table tr td a:hover{
+  color:orange;
+}

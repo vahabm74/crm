@@ -140,13 +140,13 @@
 .nice-select .list::-webkit-scrollbar {
   width: 0; }
 
-.nice-select .has-multiple {
+.nice-select.has-multiple {
   white-space: inherit;
   height: auto;
   padding: 7px 12px;
   min-height: 36px;
   line-height: 22px; }
-  .nice-select .has-multiple span.current {
+  .nice-select.has-multiple span.current {
     border: 1px solid #CCC;
     background: #EEE;
     padding: 0 10px;
@@ -156,7 +156,7 @@
     font-size: 14px;
     margin-bottom: 3px;
     margin-right: 3px; }
-  .nice-select .has-multiple .multiple-options {
+  .nice-select.has-multiple .multiple-options {
     display: block;
     line-height: 24px;
     padding: 0; }

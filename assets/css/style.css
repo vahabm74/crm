@@ -1578,11 +1578,11 @@ body{
   text-align: right !important;
   padding-right: 8px !important;
 }
-#main .timer-box .nice-select,#main .left .all .tickets .content-ticket .info-ticket li p .nice-select,#main .left .create-ticket .form-create-ticket .form-item .nice-select{
+#main .timer-box .nice-select,#main .left .all .tickets .content-ticket .info-ticket li p .nice-select,#main .left .create-ticket .form-create-ticket .form-item .nice-select,#main .left .create-project .form-create-project .step .form-item .nice-select{
   text-align: right !important;
   padding-right: 8px !important;
 }
-#main .left .all-ticket .filter-tickets .filter .nice-select::after,#main .timer-box .nice-select::after,#main .left .create-ticket .form-create-ticket .form-item .nice-select::after{
+#main .left .all-ticket .filter-tickets .filter .nice-select::after,#main .timer-box .nice-select::after,#main .left .create-ticket .form-create-ticket .form-item .nice-select::after,#main .left .create-project .form-create-project .step .form-item .nice-select::after{
   right:auto !important;
   left:15px;
 }
@@ -2081,28 +2081,28 @@ body{
   font-size: 12px;
 }
 /*create ticket style*/
-#main .left .create-ticket{
+#main .left .create-ticket,#main .left .create-project{
   padding: 10px;
   background: #fff;
   border-radius: 5px;
 }
-#main .left .create-ticket .title h2{
+#main .left .create-ticket .title h2,#main .left .create-project .title h2{
   font-size: 1.2rem;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   margin-bottom: 25px;
 }
-#main .left .create-ticket .form-create-ticket .form-item{
+#main .left .create-ticket .form-create-ticket .form-item,#main .left .create-project .form-create-project .step .form-item{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-#main .left .create-ticket .form-create-ticket .form-item label{
+#main .left .create-ticket .form-create-ticket .form-item label,#main .left .create-project .form-create-project .step .form-item label{
   margin-bottom: 10px;
   color: #333333;
 }
-#main .left .create-ticket .form-create-ticket .form-item input{
+#main .left .create-ticket .form-create-ticket .form-item input,#main .left .create-project .form-create-project .form-item input{
   width: 100%;
   border:none;
   background: #f1f1f1;
@@ -2118,11 +2118,37 @@ body{
 #main .left .create-ticket .form-create-ticket .form-item .trumbowyg-editor{
   direction: rtl;
 }
-#main .left .create-ticket .form-create-ticket .form-item input[type=submit]{
+#main .left .create-ticket .form-create-ticket .form-item input[type=submit],#main .left .create-project .form-create-project .form-item input[type=submit]{
   background: #1e1f70;
   color: #fff;
   padding: 10px;
 }
-#main .left .create-ticket .form-create-ticket .form-item input[type=submit]:hover{
+#main .left .create-ticket .form-create-ticket .form-item input[type=submit]:hover,#main .left .create-project .form-create-project .form-item input[type=submit]:hover{
   background: orange;
+}
+/*create project style*/
+#main .left .create-project .title h2{
+  margin-bottom: 5px;
+}
+#main .left .create-project .form-create-project .step-title{
+  font-size: 1rem;
+  background: #00bcd4;
+  padding: 10px 5px;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  margin-bottom: 0;
+}
+#main .left .create-project .form-create-project .step{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 0.5%;
+  grid-row-gap: 20px;
+  border: 1px solid #00bcd4;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+#main .left .create-project .form-create-project .step .form-item input{
+  padding: 8px 5px;
 }

@@ -194,6 +194,32 @@ jQuery(document).ready(function($) {
         searchable: false,
       });
     }
+    if($('.form-create-project').length !== 0){
+      NiceSelect.bind(document.getElementById("project-customer-p"),{
+        searchable: false,
+      });
+      NiceSelect.bind(document.getElementById("project-manager-p"),{
+        searchable: false,
+      });
+      NiceSelect.bind(document.getElementById("project-info-p"),{
+        searchable: false,
+      });
+      NiceSelect.bind(document.getElementById("project-server-p"),{
+        searchable: false,
+      });
+      NiceSelect.bind(document.getElementById("project-content-p"),{
+        searchable: false,
+      });
+      NiceSelect.bind(document.getElementById("project-edu-p"),{
+        searchable: false,
+      });
+      NiceSelect.bind(document.getElementById("project-category-p"),{
+        searchable: false,
+      });
+      NiceSelect.bind(document.getElementById("project-team-p"),{
+        searchable: false,
+      });
+    }
     //ticket time hover description
     $('#main .left .all-ticket-t .time-main .right-t ul li.description').hover(function() {
       let txt = $(this).text();
@@ -336,6 +362,7 @@ jQuery(document).ready(function($) {
        ]
       });
     }
+
     //Close alert profile
     $('#main .left .profile .profile-content .alert-profile i:last-child').click(function() {
       $(this).closest('.alert-profile').hide(200);

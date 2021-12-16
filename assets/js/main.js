@@ -183,6 +183,17 @@ jQuery(document).ready(function($) {
         searchable: false,
       });
     }
+    if($('.form-create-ticket').length !== 0){
+      NiceSelect.bind(document.getElementById("ticket-priority-c"),{
+        searchable: false,
+      });
+      NiceSelect.bind(document.getElementById("ticket-project-c"),{
+        searchable: false,
+      });
+      NiceSelect.bind(document.getElementById("ticket-user-c"),{
+        searchable: false,
+      });
+    }
     //ticket time hover description
     $('#main .left .all-ticket-t .time-main .right-t ul li.description').hover(function() {
       let txt = $(this).text();
@@ -296,6 +307,32 @@ jQuery(document).ready(function($) {
            ['removeformat'],
            ['fullscreen'],
            ['foreColor', 'backColor'],
+       ]
+      });
+    }
+    if($('.form-create-ticket').length !== 0){
+      $('#ticket-description-c').trumbowyg({
+        btnsDef: {
+           // Create a new dropdown
+           image: {
+               dropdown: ['insertImage', 'base64'],
+               ico: 'insertImage'
+           }
+       },
+       // Redefine the button pane
+       btns: [
+           ['viewHTML'],
+           ['formatting'],
+           ['strong', 'em'],
+           ['link'],
+           ['image'], // Our fresh created dropdown
+           ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+           ['unorderedList', 'orderedList'],
+           ['horizontalRule'],
+           ['removeformat'],
+           ['fullscreen'],
+           ['foreColor', 'backColor'],
+           ['highlight']
        ]
       });
     }

@@ -2152,3 +2152,70 @@ body{
 #main .left .create-project .form-create-project .step .form-item input{
   padding: 8px 5px;
 }
+#main.hl{
+  align-items: center;
+  justify-content: center;
+}
+#main .login-box{
+  padding: 40px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  background: #fff;
+  border-radius: 10px;
+  width: 40%;
+}
+#main .login-box .title{
+  text-align: center;
+  margin-bottom: 40px;
+  color: #673ab7;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+#main .login-box .login-form{
+  width: 100%;
+}
+#main .login-box .login-form .form-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#main .login-box .login-form .form-item label{
+  color: #636363;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+#main .login-box .login-form .form-item input{
+  width: 100%;
+  border:none;
+  background: #ecf2f3;
+  border-radius: 5px;
+  padding: 10px;
+  color: #333;
+  outline: 0;
+  direction: ltr;
+}
+#main .login-box .login-form .cta-form{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#main .login-box .login-form .cta-form .form-item{
+  flex-direction: row;
+  align-items: center;
+}
+#main .login-box .login-form .cta-form .form-item label{
+  margin: 0;
+  font-size: 13px;
+}
+#main .login-box .login-form .cta-form .form-item input{
+  width: auto;
+  margin-left: 10px;
+}
+#main .login-box .login-form .form-item input[type=submit]{
+  color: #fff;
+  background: #673ab7;
+}
+#main .login-box .login-form .form-item input[type=submit]:hover{
+  background: orange;
+}

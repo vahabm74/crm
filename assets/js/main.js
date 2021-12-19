@@ -45,7 +45,7 @@ jQuery(document).ready(function($) {
       $('#main .left .all .tickets .title h3').find('.show-tooltip').remove();
     });
     $('#main .left .all .tickets .content-ticket .info-ticket li p.info-ticket-task-value').hover(function() {
-      let tititle = $(this).text();
+      let tititle = $(this).find('input').val();
       $('#main .left .all .tickets .title .tts').text(' ('+tititle+')');
     },function(){
       $('#main .left .all .tickets .title .tts').text('');
@@ -119,6 +119,9 @@ jQuery(document).ready(function($) {
     }
     if($("#priority-reply").length !== 0){
       NiceSelect.bind(document.getElementById("priority-reply"),{
+        searchable: false
+      });
+      NiceSelect.bind(document.getElementById("status-reply"),{
         searchable: false
       });
     }
@@ -227,54 +230,76 @@ jQuery(document).ready(function($) {
     },function() {
       $(this).closest('.right-t').find('span').remove();
     });
+    //************************************** Timer **************************************************//
     //set timer click functions
-    $('#main .set-timer').click(function() {
-      let today = new Date();
-      let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-      let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      let dateTimes = date+'T'+time;
-      Cookies.set('start-time', dateTimes);
-      $(this).hide();
-      $('#main .set-timer-end').css({'display':'flex'});
-      $('#main .set-timer-end').find('.counter').fadeIn();
-      var sec = 0;
-      function pad ( val ) { return val > 9 ? val : "0" + val; }
-      counter = setInterval( function(){
-          var secs = pad(++sec%60);
-          var mins = pad(parseInt(sec/60,10));
-          $('#main .set-timer-end .counter').html(mins+':'+secs);
-      }, 1000);
-    });
-    $('#main .set-timer-end').click(function() {
-      let today = new Date();
-      let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-      let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      let dateTime = date+'T'+time;
-      let end_ti = Cookies.set('end-time', dateTime);
-       $(this).hide();
-       $('#main .set-timer').css({'display':'flex'});
-       $('.timer-box').delay(200).fadeIn(200);
-       $('.overlay').fadeIn(0);
-       $('#main .left').css({'overflow':'hidden'});
-       clearInterval(counter);
-       let ss = ( new Date(Cookies.get('end-time')) - new Date(Cookies.get('start-time')));
-       let space = Math.floor(ss / 1000 % 60);
-       $('.savetime').val(space);
-       $('.start-time').val(Cookies.get('start-time'));
-       $('.end-time').val(Cookies.get('end-time'));
-       Cookies.remove('start-time');
-       Cookies.remove('end-time');
-       Cookies.remove('between');
-    });
-    if(Cookies.get('start-time')){
-      $('#main .set-timer').css({'display':'none'});
-      $('#main .set-timer-end').css({'display':'flex'});
-      $('#main .set-timer-end').find('.counter').fadeIn();
-      var getsecound = $('.savetime').val();
-      $('#main .set-timer-end').find('.counter').text(new Date().getTime() - new Date(Cookies.get('start-time')));
-    }else{
-      $('#main .set-timer').css({'display':'flex'});
+    if (Cookies.get('start-time')) {
+        $('#main .set-timer').css({'display': 'none'});
+        $('#main .set-timer-end').css({'display': 'flex'});
+        $('#main .set-timer-end').find('.counter').fadeIn();
+        // var getsecound = $('.savetime').val();
+        // console.log(new Date(new Date().getSeconds() - new Date(Cookies.get('start-time'))).getSeconds())
+        // $('#main .set-timer-end').find('.counter')
+        //     .text(new Date(new Date().getSeconds() - new Date(Cookies.get('start-time'))).getSeconds());
+
+        var sec = Math.floor(new Date(new Date().getTime() - new Date(Cookies.get('start-time'))).getTime() / 1000);
+
+        function pad(val) {
+            return val > 9 ? val : "0" + val;
+        }
+
+        counter = setInterval(function () {
+            var secs = pad(++sec % 60);
+            var mins = pad(parseInt(sec / 60, 10));
+            $('#main .set-timer-end .counter').html(mins + ':' + secs);
+        }, 1000);
+    } else {
+        $('#main .set-timer').click(function () {
+            let today = new Date();
+            let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            let dateTimes = date + 'T' + time;
+            Cookies.set('start-time', dateTimes, {expires: 5 * 60 * 1000});
+            $(this).hide();
+            $('#main .set-timer-end').css({'display': 'flex'});
+            $('#main .set-timer-end').find('.counter').fadeIn();
+            var sec = 0;
+
+            function pad(val) {
+                return val > 9 ? val : "0" + val;
+            }
+
+            counter = setInterval(function () {
+                var secs = pad(++sec % 60);
+                var mins = pad(parseInt(sec / 60, 10));
+                $('#main .set-timer-end .counter').html(mins + ':' + secs);
+            }, 1000);
+        });
     }
+
+    $('#main .set-timer-end').click(function () {
+        let today = new Date();
+        let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let dateTime = date + 'T' + time;
+        let end_ti = Cookies.set('end-time', dateTime);
+        $(this).hide();
+        $('#main .set-timer').css({'display': 'flex'});
+        $('.timer-box').delay(200).fadeIn(200);
+        $('.overlay').fadeIn(0);
+        $('#main .left').css({'overflow': 'hidden'});
+        clearInterval(counter);
+        let ss = Math.floor(Math.floor(today.getTime() - new Date(Cookies.get('start-time')).getTime()) / 1000)
+        console.log(Math.floor(Math.floor(today.getTime() - new Date(Cookies.get('start-time')).getTime()) / 1000))
+        // let space = Math.floor(ss / 1000 % 60);
+        // Math.floor(new Date(new Date().getTime() - new Date(Cookies.get('start-time'))).getTime() / 1000)
+        $('.savetime').val(ss);
+        $('.start-time').val(Cookies.get('start-time'));
+        $('.end-time').val(Cookies.get('end-time'));
+        Cookies.remove('start-time');
+        Cookies.remove('end-time');
+        Cookies.remove('between');
+    });
+
 
     $('#main .timer-box h2 i').click(function () {
       $('.timer-box').fadeOut(0);
@@ -336,7 +361,7 @@ jQuery(document).ready(function($) {
        ]
       });
     }
-    if($('.fprofile').length !== 0){
+    if($('#user-address').length !== 0){
       $('#user-request').trumbowyg({
         btnsDef: {
            // Create a new dropdown

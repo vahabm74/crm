@@ -247,17 +247,17 @@ body{
 #main .right .main-menu ul{
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 #main .right .main-menu ul li{
   margin-bottom: 0;
-  padding: 15px 2em 15px 0;
+  padding: 10px 2em 10px 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 #main .right .main-menu ul li i{
-  font-size: 20px;
+  font-size: 16px;
   margin-left: 10px;
   color: #fff;
 }
@@ -280,14 +280,10 @@ body{
   height: 100%;
 }
 #main .right .logout{
-  position: absolute;
   display: block;
   text-align: center;
   width: 70%;
-  left: 0;
-  right: 0;
-  bottom: 60px;
-  margin: auto;
+  margin: 20px auto;
   font-size: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -312,7 +308,10 @@ body{
 #main .left::-webkit-scrollbar {
   /* width: 5px; */
 }
-#main .left::-webkit-scrollbar-thumb {
+.nice-select .list::-webkit-scrollbar{
+  width:2px;
+}
+#main .left::-webkit-scrollbar-thumb,.nice-select .list::-webkit-scrollbar-thumb{
   background: #1c1878;
   border-radius: 30px;
 }
@@ -369,6 +368,7 @@ body{
 #main .left .header .notification > ul li a{
   color: #636363;
   position: relative;
+  cursor: pointer;
 }
 #main .left .header .notification > ul li a .ifhas{
   position: absolute;
@@ -832,6 +832,7 @@ body{
   left: 7px;
   top: 5px;
   font-size: 10px;
+  cursor: pointer;
 }
 #main .left .all .tickets .title .new-note{
   position: absolute;
@@ -842,6 +843,7 @@ body{
   background: #070159;
   padding: 0 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 #main .left .all .tickets .title .new-ticket:hover,#main .left .all .tickets .title .new-note:hover{
   text-decoration: underline;
@@ -858,6 +860,7 @@ body{
   color: #fff;
   padding: 0 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 #main .left .all .tickets .title .new-reply:hover{
   opacity: 0.95;
@@ -912,6 +915,14 @@ body{
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+#main .left .all .tickets .content-ticket .info-ticket li p.info-ticket-task-value input{
+  width: 100%;
+  border: none;
+  background: #f2f2f2;
+  border-radius: 5px;
+  padding: 8px 10px;
+  outline: 0;
 }
 #main .left .all .tickets .content-ticket .info-ticket li p.info-ticket-priority-value{
   /* color: #0cb50c; */
@@ -1070,6 +1081,20 @@ body{
 #main .left .all .tickets .content-ticket .messages .message .bottom-message{
   position: relative;
 }
+#main .left .all .tickets .content-ticket .messages .message a::before{
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  margin-left: 5px;
+}
+#main .left .all .tickets .content-ticket .messages .message a[href$=".pdf"]::before{
+  content:"\f1c1";
+}
+#main .left .all .tickets .content-ticket .messages .message a[href$=".zip"]::before{
+  content:"\f1c6";
+}
+#main .left .all .tickets .content-ticket .messages .message a[href$=".png"]::before,#main .left .all .tickets .content-ticket .messages .message a[href$=".jpg"]::before,#main .left .all .tickets .content-ticket .messages .message a[href$=".jpeg"]::before,#main .left .all .tickets .content-ticket .messages .message a[href$=".gif"]::before{
+  content:"\f1c5";
+}
 #main .left .all .tickets .content-ticket .messages .message .bottom-message input[type=text]{
   margin-top: 8px;
 }
@@ -1084,7 +1109,7 @@ body{
   top: 0;
   bottom: 0;
   background: #fff;
-  max-width: 600px;
+  max-width: 750px;
   margin: auto;
   max-height: 500px;
   box-shadow: 0 0 10px rgb(0 0 0 / 20%);
@@ -1539,6 +1564,7 @@ body{
 }
 #main .left .all-ticket .create-ticket{
   margin-bottom: 15px;
+  background: none;
 }
 #main .left .all-ticket .create-ticket a{
   padding: 8px 25px;
@@ -1661,7 +1687,7 @@ body{
   background: #f9d9cf;
 }
 #main .left .all-ticket-tb tbody tr.pend{
-  background: orange;
+  background: #ffe8bd;
 }
 #main .left .all-ticket .filter-shape .filter{
   width:calc(96% / 5);
@@ -1873,7 +1899,7 @@ body{
 #main .left .profile .profile-menu .main-menu li a{
   display: block;
   padding: 10px;
-  color: #f19702;
+  color: #070159;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -2062,6 +2088,9 @@ body{
   justify-content: flex-start;
   align-items: flex-start;
 }
+#main .left .profile .user-info .fprofile .right-form .form-item .trumbowyg-editor{
+  direction: rtl;
+}
 #main .left .profile .user-info .fprofile .right-form .form-item label{
   width: 100%;
   margin-bottom: 8px;
@@ -2081,7 +2110,7 @@ body{
   font-size: 12px;
 }
 /*create ticket style*/
-#main .left .create-ticket,#main .left .create-project{
+#main .left .detail-ticket .create-ticket,#main .left .detail-ticket .create-project{
   padding: 10px;
   background: #fff;
   border-radius: 5px;

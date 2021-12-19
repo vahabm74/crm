@@ -151,11 +151,7 @@
                 <li>
                   <p class="info-ticket-task-title">تسک</p>
                   <p class="info-ticket-task-value">
-                    <!-- <select id="info-ticket-task-value-select" class="info-ticket-task-value-select" name="info-ticket-task-value-select">
-                      <option value="">نام تسک ۱</option>
-                      <option value="">نام تسک ۲</option>
-                    </select> -->
-                    تغییر ریسپانسیو تعمیراتو
+                  <input type="text" name="info-ticket-task-value-input" class="info-ticket-task-value-input" value="تغییر ریسپانسیو تعمیراتو">
                   </p>
                 </li>
                 <li>
@@ -334,7 +330,12 @@
                     </li>
                     <li>
                       <p class="name">وضعیت :</p>
-                      <p class="value">باز</p>
+                      <p class="value">
+                        <select class="status-reply" id="status-reply" name="status-reply">
+                          <option value="">باز</option>
+                          <option value="">بسته</option>
+                        </select>
+                      </p>
                     </li>
                   </ul>
                 </div>

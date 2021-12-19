@@ -229,7 +229,11 @@ jQuery(document).ready(function($) {
     });
     //set timer click functions
     $('#main .set-timer').click(function() {
-      // $(this).toggleClass('start');
+      let today = new Date();
+      let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      let dateTimes = date+'T'+time;
+      Cookies.set('start-time', dateTimes);
       $(this).hide();
       $('#main .set-timer-end').css({'display':'flex'});
       $('#main .set-timer-end').find('.counter').fadeIn();
@@ -242,15 +246,36 @@ jQuery(document).ready(function($) {
       }, 1000);
     });
     $('#main .set-timer-end').click(function() {
+      let today = new Date();
+      let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      let dateTime = date+'T'+time;
+      let end_ti = Cookies.set('end-time', dateTime);
        $(this).hide();
        $('#main .set-timer').css({'display':'flex'});
        $('.timer-box').delay(200).fadeIn(200);
        $('.overlay').fadeIn(0);
        $('#main .left').css({'overflow':'hidden'});
        clearInterval(counter);
-       var saveTime = $(this).find('.counter').text();;
-       $('.savetime').val(saveTime);
+       let ss = ( new Date(Cookies.get('end-time')) - new Date(Cookies.get('start-time')));
+       let space = Math.floor(ss / 1000 % 60);
+       $('.savetime').val(space);
+       $('.start-time').val(Cookies.get('start-time'));
+       $('.end-time').val(Cookies.get('end-time'));
+       Cookies.remove('start-time');
+       Cookies.remove('end-time');
+       Cookies.remove('between');
     });
+    if(Cookies.get('start-time')){
+      $('#main .set-timer').css({'display':'none'});
+      $('#main .set-timer-end').css({'display':'flex'});
+      $('#main .set-timer-end').find('.counter').fadeIn();
+      var getsecound = $('.savetime').val();
+      $('#main .set-timer-end').find('.counter').text(new Date().getTime() - new Date(Cookies.get('start-time')));
+    }else{
+      $('#main .set-timer').css({'display':'flex'});
+    }
+
     $('#main .timer-box h2 i').click(function () {
       $('.timer-box').fadeOut(0);
       $('.overlay').delay(200).fadeOut(0);

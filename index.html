@@ -297,7 +297,7 @@
                   </p>
                   <p class="status-step">
                     <span>وضعیت</span>
-                    <span class="check-status-step">Pending</span>
+                    <span class="check-status-step">منتظر پاسخ</span>
                   </p>
                 </li>
                 <li class="pending">
@@ -414,15 +414,17 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <!-- Every ticket has two classes : if Tickets on deadline has Class 'over' else if onwork has Class 'now' else pend has class 'pend'-->
-                    <tr class="over">
+                    <!-- Every ticket has two classes : if Tickets is closed has Class 'closed' else if id open has Class 'open'-->
+                    <tr class="open">
                       <!-- Note : Whene user hover on ticket-subjec title wwill be show after title box automatic-->
                       <td class="ticket-subject">
                         <a href="#!">  بررسی طرح ارسالی توسط خانوم حسینی و رد یا تایید آن</a>
                       </td>
                       <td class="ticket-task">مارکتینگ وبسایت</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status open">باز</td>
+                      <td class="ticket-status open">
+                        <span>باز</span>
+                      </td>
                       <td class="ticket-answer">۰</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۱۷</td>
                       <td class="ticket-priority">مهم</td>
@@ -436,13 +438,15 @@
                         </a>
                       </td>
                     </tr>
-                    <tr class="now">
+                    <tr class="open">
                       <td class="ticket-subject">
                         <a href="#!">تیکت دوم</a>
                       </td>
                       <td class="ticket-task">طراحی عکس های خانم حسینی</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-status open">
+                        <span>باز</span>
+                      </td>
                       <td class="ticket-answer">۲</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۱۶</td>
                       <td class="ticket-priority">مهم</td>
@@ -456,7 +460,7 @@
                         </a>
                       </td>
                     </tr>
-                    <tr class="pend">
+                    <tr class="open">
                       <td class="ticket-subject">
                         <a href="#!">
                           تیکت دوم
@@ -464,7 +468,9 @@
                       </td>
                       <td class="ticket-task">طراحی عکس های خانم حسینی</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-status open">
+                        <span>باز</span>
+                      </td>
                       <td class="ticket-answer">۳</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۰۶</td>
                       <td class="ticket-priority">عادی</td>
@@ -478,7 +484,7 @@
                         </a>
                       </td>
                     </tr>
-                    <tr class="over">
+                    <tr class="closed">
                       <td class="ticket-subject">
                         <a href="#!">
                           تیکت دوم
@@ -486,7 +492,9 @@
                       </td>
                       <td class="ticket-task">طراحی عکس های خانم حسینی</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-status closed">
+                        <span>بسته</span>
+                      </td>
                       <td class="ticket-answer">۵</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۰۳</td>
                       <td class="ticket-priority">مهم</td>
@@ -500,7 +508,7 @@
                         </a>
                       </td>
                     </tr>
-                    <tr class="over">
+                    <tr class="closed">
                       <td class="ticket-subject">
                         <a href="#!">
                           تیکت دوم
@@ -508,7 +516,9 @@
                       </td>
                       <td class="ticket-task">طراحی عکس های خانم حسینی</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-status closed">
+                        <span>بسته</span>
+                      </td>
                       <td class="ticket-answer">۰</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۱۵</td>
                       <td class="ticket-priority">عادی</td>
@@ -522,7 +532,7 @@
                         </a>
                       </td>
                     </tr>
-                    <tr class="over">
+                    <tr class="closed">
                       <td class="ticket-subject">
                         <a href="#!">
                           تیکت دوم
@@ -530,7 +540,9 @@
                       </td>
                       <td class="ticket-task">طراحی عکس های خانم حسینی</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-status closed">
+                        <span>بسته</span>
+                      </td>
                       <td class="ticket-answer">۱</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۲۰</td>
                       <td class="ticket-priority">مهم</td>
@@ -544,7 +556,7 @@
                         </a>
                       </td>
                     </tr>
-                    <tr class="over">
+                    <tr class="closed">
                       <td class="ticket-subject">
                         <a href="#!">
                           تیکت دوم
@@ -552,7 +564,9 @@
                       </td>
                       <td class="ticket-task">طراحی عکس های خانم حسینی</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-status closed">
+                        <span>بسته</span>
+                      </td>
                       <td class="ticket-answer">۲</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۰۹</td>
                       <td class="ticket-priority">مهم</td>
@@ -566,7 +580,7 @@
                         </a>
                       </td>
                     </tr>
-                    <tr class="now">
+                    <tr class="open">
                       <td class="ticket-subject">
                         <a href="#!">
                           تیکت دوم
@@ -574,7 +588,9 @@
                       </td>
                       <td class="ticket-task">طراحی عکس های خانم حسینی</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-status open">
+                        <span>باز</span>
+                      </td>
                       <td class="ticket-answer">۲</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۰۸</td>
                       <td class="ticket-priority">عادی</td>
@@ -588,7 +604,7 @@
                         </a>
                       </td>
                     </tr>
-                    <tr class="now">
+                    <tr class="open">
                       <td class="ticket-subject">
                         <a href="#!">
                           تیکت دوم
@@ -596,7 +612,9 @@
                       </td>
                       <td class="ticket-task">طراحی عکس های خانم حسینی</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-status open">
+                        <span>باز</span>
+                      </td>
                       <td class="ticket-answer">۲</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۱۲</td>
                       <td class="ticket-priority">عادی</td>
@@ -610,7 +628,7 @@
                         </a>
                       </td>
                     </tr>
-                    <tr class="now">
+                    <tr class="open">
                       <td class="ticket-subject">
                         <a href="#!">
                           تیکت دوم
@@ -618,7 +636,9 @@
                       </td>
                       <td class="ticket-task">طراحی عکس های خانم حسینی</td>
                       <!-- ticket status has twwo classes - if is open has class open and if is closed has class closed-->
-                      <td class="ticket-status closed">بسته</td>
+                      <td class="ticket-status open">
+                        <span>باز</span>
+                      </td>
                       <td class="ticket-answer">۲</td>
                       <td class="ticket-last-update">۱۴۰۰/۰۷/۱۰</td>
                       <td class="ticket-priority">مهم</td>

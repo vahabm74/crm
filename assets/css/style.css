@@ -6,14 +6,64 @@ Vesrion : 1.0.0
 
 /*********** include fonts **************/
 @font-face {
-  font-family: 'Yekan';
-  src: url('../font/iranyekanwebregular.eot');
-  src: url('../font/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
-       url('../font/iranyekanwebregular.ttf') format('truetype'),
-       url('../font/iranyekanwebregular.woff') format('woff'),
-       url('../font/iranyekanwebregular.woff2') format('woff2');
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../font/eot/IRANSansWeb_Black.eot');
+	src: url('../font/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/woff2/IRANSansWeb_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/woff/IRANSansWeb_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/ttf/IRANSansWeb_Black.ttf') format('truetype');
 }
-
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../font/eot/IRANSansWeb_Bold.eot');
+	src: url('../font/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/woff2/IRANSansWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/woff/IRANSansWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 500;
+	src: url('../font/eot/IRANSansWeb_Medium.eot');
+	src: url('../font/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/woff2/IRANSansWeb_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/woff/IRANSansWeb_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 300;
+	src: url('../font/eot/IRANSansWeb_Light.eot');
+	src: url('../font/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/woff2/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/woff/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/ttf/IRANSansWeb_Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 200;
+	src: url('../font/eot/IRANSansWeb_UltraLight.eot');
+	src: url('../font/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/woff/IRANSansWeb_UltraLight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../font/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../font/eot/IRANSansWeb.eot');
+	src: url('../font/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../font/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../font/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
 /********* reset style *************/
 *,*::after,*::before{
   padding: 0;
@@ -26,9 +76,13 @@ li{
   list-style-type: none;
 }
 body{
-  font-family: 'Yekan';
+  font-family: IRANSans;
   font-size: 14px;
   line-height: 22px;
+  font-weight: 500;
+}
+button, input, optgroup, select, textarea{
+  font-weight: 500;
 }
 /************ index style*********/
 #main{
@@ -251,15 +305,16 @@ body{
 }
 #main .right .main-menu ul li{
   margin-bottom: 0;
-  padding: 10px 2em 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  position: relative;
 }
 #main .right .main-menu ul li i{
   font-size: 16px;
   margin-left: 10px;
   color: #fff;
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  pointer-events: none;
 }
 #main .right .main-menu ul li.active,#main .right .main-menu ul li:hover{
   background: #070159;
@@ -267,6 +322,7 @@ body{
 #main .right .main-menu ul li a{
   color: #ffffff;
   display: block;
+  padding: 10px 3em 10px 0;
 }
 #main .right.open .main-menu ul li{
   padding: 15px 0;
@@ -506,13 +562,12 @@ body{
   color:#f33030;
   cursor: pointer;
   font-size: 10px;
-  font-weight: normal;
+  font-weight: 300;
 }
 #main .left .items .box.project-status span{
     background: #fee4cb;
     padding: 5px;
     font-size: 16px;
-    font-family: monospace;
 }
 #main .left .items .box.project-name{
   background: rgb(212,208,228);
@@ -678,6 +733,7 @@ body{
 }
 #main .left .all .tickets .content{
   overflow: auto;
+  padding: 8px;
 }
 #main .left .all .tickets .content::-webkit-scrollbar {
     height: 5px;
@@ -705,11 +761,14 @@ body{
   font-size: 12px;
   text-align: center;
 }
-#main .left .all .tickets .content table tbody tr.over{
-  background: #f9d9cf;
+#main .left .all .tickets .content table tbody tr,#main .left .all .tickets .content table thead tr{
+  border-bottom: 1px solid #ccc;
 }
-#main .left .all .tickets .content table tbody tr.pend{
-  background: orange;
+#main .left .all .tickets .content table tbody tr.closed{
+  background: #dbdbdb;
+}
+#main .left .all .tickets .content table tbody tr.open{
+  background: #fff;
 }
 #main .left .all .tickets .content table tbody tr td{
   padding: 5px 10px;
@@ -724,8 +783,23 @@ body{
   text-decoration: underline;
   color:#070159;
 }
+#main .left .all .tickets .content table tbody tr td.ticket-status.open{
+  color:#b97c83;
+}
+#main .left .all .tickets .content table tbody tr td.ticket-status.open span{
+  display: inline-block;
+  padding: 0 15px;
+  background: #fbe8e2;
+  border-radius: 5px;
+}
 #main .left .all .tickets .content table tbody tr td.ticket-status.closed{
-  color:#d86363;
+  color:#55b5b1;
+}
+#main .left .all .tickets .content table tbody tr td.ticket-status.closed span{
+  background: #ccf6f5;
+  display: inline-block;
+  padding: 0 15px;
+  border-radius: 5px;
 }
 #main .left .all .tickets .content table tbody tr td.ticket-action,#main .left .all-ticket-tb tbody tr td.ticket-action{
   display: flex;
@@ -923,6 +997,7 @@ body{
   border-radius: 5px;
   padding: 8px 10px;
   outline: 0;
+  font-weight: 500;
 }
 #main .left .all .tickets .content-ticket .info-ticket li p.info-ticket-priority-value{
   /* color: #0cb50c; */
@@ -1529,6 +1604,7 @@ body{
   font-size: 12px;
   padding-right: 0;
   width: 100%;
+  font-weight: 500;
 }
 #main .left .all #new-note .nice-select{
   padding-right: 28px;
@@ -1541,16 +1617,18 @@ body{
 .nice-select .option{
   padding: 0 !important;
   text-align: center;
+  font-weight: 500;
 }
 .nice-select .list{
   margin: 0;
+  font-weight: 500;
 }
 /*all tickets page*/
 #main .left .all-ticket{
   flex-direction: column;
 }
 #main .left .all-ticket .content-ticket{
-  padding: 0 !important;
+  padding: 8px !important;
 }
 #main .left .all-ticket .content-ticket::-webkit-scrollbar{
   width:5px;
@@ -1617,7 +1695,7 @@ body{
   right:auto !important;
 }
 #main .left .all-ticket .filter-tickets .filter .nice-select .option,#main .timer-box .nice-select .option{
-  font-weight: normal !important;
+  font-weight: 300 !important;
 }
 #main .left .all-ticket .filter-tickets .filter .nice-select .option:hover,#main .left .all-ticket .filter-tickets .filter .nice-select .option.focus, .nice-select .option.selected.focus{
   background: #1b1578;
@@ -1641,6 +1719,9 @@ body{
 #main .left .all-ticket-tb{
   white-space: nowrap;
 }
+#main .left .all-ticket-tb tr{
+  border-bottom: 1px solid #ccc;
+}
 #main .left .all-ticket-tb thead{
   font-size: 12px;
   text-align: center;
@@ -1648,7 +1729,6 @@ body{
   top: 0;
   background: #fff;
   z-index: 2;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 #main .left .all-ticket-tb thead th{
   padding: 8px 5px;
@@ -1662,10 +1742,25 @@ body{
   justify-content: space-around;
 }
 #main .left .all-ticket-tb tbody tr td.open{
-  color:green;
+  color:#b97c83;
+}
+#main .left .all-ticket-tb tbody tr td.open span{
+  display: inline-block;
+  padding: 0 15px;
+  background: #fbe8e2;
+  border-radius: 5px;
 }
 #main .left .all-ticket-tb tbody tr td.close{
-  color:red;
+  color:#55b5b1;
+}
+#main .left .all-ticket-tb tbody tr td.close span{
+  background: #ccf6f5;
+  display: inline-block;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+#main .left .all-ticket-tb tbody tr td.pending{
+  color:#bf7e08;
 }
 #main .left .all-ticket-tb thead tr th[id]{
   cursor: pointer;
@@ -1683,11 +1778,8 @@ body{
   text-decoration: underline;
   color: #070159;
 }
-#main .left .all-ticket-tb tbody tr.over{
-  background: #f9d9cf;
-}
-#main .left .all-ticket-tb tbody tr.pend{
-  background: #ffe8bd;
+#main .left .all-ticket-tb tbody tr.closed{
+  background: #dbdbdb;
 }
 #main .left .all-ticket .filter-shape .filter{
   width:calc(96% / 5);
@@ -1936,7 +2028,7 @@ body{
   position: absolute;
   left: 0;
   font-size: 12px;
-  font-weight: normal;
+  font-weight: 300;
   top: 5px;
   color:#636363;
 }
@@ -2134,7 +2226,7 @@ body{
 #main .left .create-ticket .form-create-ticket .form-item input,#main .left .create-project .form-create-project .form-item input{
   width: 100%;
   border:none;
-  background: #f1f1f1;
+  background: #f8f8f8;
   color: #636363;
   padding: 5px;
   border-radius: 5px;
@@ -2146,6 +2238,7 @@ body{
 }
 #main .left .create-ticket .form-create-ticket .form-item .trumbowyg-editor{
   direction: rtl;
+  background: #f8f8f8;
 }
 #main .left .create-ticket .form-create-ticket .form-item input[type=submit],#main .left .create-project .form-create-project .form-item input[type=submit]{
   background: #1e1f70;

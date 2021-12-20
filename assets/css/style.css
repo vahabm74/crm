@@ -1725,8 +1725,6 @@ button, input, optgroup, select, textarea{
 #main .left .all-ticket-tb thead{
   font-size: 12px;
   text-align: center;
-  position: sticky;
-  top: 0;
   background: #fff;
   z-index: 2;
 }

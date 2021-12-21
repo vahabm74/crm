@@ -131,6 +131,7 @@
         </div>
         <!-- begin main ticket box -->
         <div class="all">
+          <!-- if ticket has not note: tag with class 'ticket-w' has class 'no-note' and tag width class 'notes' has class 'note-closed'-->
           <div class="tickets ticket-w">
             <div class="title">
               <img src="assets/images/ticket.png" alt="عنوان تیکت" title="عنوان تیکت" class="img-fluid">
@@ -139,7 +140,8 @@
                 تاریخچه تیکت
               </a>
               <a href="#!" class="new-note">
-                لیست نوت ها</a>
+                نوت جدید
+              </a>
               <a href="#!" class="new-reply">
                 <i class="fas fa-plus"></i>
                 پاسخ جدید
@@ -450,9 +452,9 @@
           <div class="notes">
             <div class="title">
               <h3>
-                <i class="far fa-window-close"></i>
+
                 نوت ها</h3>
-              <a href="#!">نوت جدید</a>
+              <!-- <a href="#!">نوت جدید</a> -->
             </div>
             <div class="list-notes">
               <!--every note has data 'data-bgcolor' that gett from checkbox color selector-->

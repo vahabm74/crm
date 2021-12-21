@@ -62,7 +62,6 @@ jQuery(document).ready(function($) {
       $('#main .left .all .tickets .content-ticket #reply').removeClass('show');
       $('#main .left .all #new-note').fadeOut(200);
       $('#main .left .all .tickets .history-ticket').fadeOut(200);
-      $('#main .timer-box').fadeOut();
     });
 
     //History ticket box show and hide
@@ -80,17 +79,17 @@ jQuery(document).ready(function($) {
     });
 
     //open new note box
-    $('#main .left .all .notes .title a').click(function() {
+    $('#main .left .all .tickets .title .new-note').click(function() {
       $('#main .left').css({'overflow':'hidden'});
       $('#main .left .overlay').fadeIn();
       $('#main .left .all #new-note').fadeIn(200);
     });
-    $('#main .left .all .tickets .title .new-note').click(function() {
-      $('#main .left .all .notes').fadeIn(200);
-    });
-    $('#main .left .all .notes .title h3 i').click(function() {
-      $('#main .left .all .notes').fadeOut(200);
-    });
+    // $('#main .left .all .tickets .title .new-note').click(function() {
+    //   $('#main .left .all .notes').fadeIn(200);
+    // });
+    // $('#main .left .all .notes .title h3 i').click(function() {
+    //   $('#main .left .all .notes').fadeOut(200);
+    // });
     //Check color note
     $('#main .left .all #new-note .note-content .note-footer p label').click(function() {
       $('#main .left .all #new-note .note-content .note-footer p label').html('');
@@ -419,4 +418,5 @@ jQuery(document).ready(function($) {
     });
     //show required start on the label
     $('.form-item .rq').append('<span class="star">*</span>');
+    //show note list and change width
 });

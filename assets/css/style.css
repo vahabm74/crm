@@ -702,7 +702,10 @@ button, input, optgroup, select, textarea{
   background: #fff;
 }
 #main .left .all .tickets.ticket-w{
-  width: 100%;
+  width: 70%;
+}
+#main .left .all .tickets.ticket-w.no-note{
+	width:100%;
 }
 #main .left .all .tickets .title{
   display: flex;
@@ -1381,15 +1384,18 @@ button, input, optgroup, select, textarea{
   background: #fff;
 }
 #main .left .all .notes{
-  position: fixed;
-  left: 10px;
+  position: static;
+  /* left: 10px; */
   z-index: 10;
   border-radius: 5px;
   overflow: hidden;
-  width: 300px;
-  display:none;
+  width: 28%;
+  display:block;
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+#main .left .all .notes.note-closed{
+	display: none;
 }
 #main .left .all .notes .title,#main .left .all .tickets .content-ticket .history-ticket .title{
   display: flex;

@@ -143,7 +143,7 @@ button, input, optgroup, select, textarea{
   margin: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
-  z-index: 99999999;
+  z-index: 99999;
   display: none;
 }
 #main .timer-box h2{
@@ -1687,6 +1687,16 @@ button, input, optgroup, select, textarea{
   width: 100%;
   margin: 15px 0;
 }
+#main .left .all-ticket .filter-tickets .select2-container .select2-selection--single{
+	height: 38px;
+	outline: 0;
+}
+#main .left .all-ticket .filter-tickets .select2-container--default .select2-selection--single .select2-selection__rendered{
+	line-height: 38px;
+}
+#main .left .all-ticket .filter-tickets .select2-container--default .select2-selection--single .select2-selection__arrow{
+	height: 36px;
+}
 #main .left .all-ticket .filter-tickets .filter{
   width: calc(96% / 6);
 }
@@ -2247,6 +2257,26 @@ button, input, optgroup, select, textarea{
   justify-content: flex-start;
   align-items: flex-start;
 }
+#main .left .create-project .form-create-project .form-item .select2-container .select2-selection--single,#main .left .create-project .form-create-project .form-item .select2-container .select2-selection--multiple{
+	height: 38px;
+	border: none;
+	background: #f8f8f8;
+	outline: 0;
+}
+#main .left .create-project .form-create-project .form-item .select2-container--default .select2-selection--single .select2-selection__rendered{
+	line-height: 38px;
+}
+#main .left .create-project .form-create-project .form-item .select2-selection__arrow{
+	height: 35px;
+}
+#main .left .create-project .form-create-project .form-item .select2-container .select2-selection--multiple .select2-selection__rendered{
+	line-height: 27px;
+	white-space: nowrap;
+}
+#main .left .create-project .form-create-project .step3 .select2-container{
+	width: auto !important;
+	min-width: 348px;
+}
 #main .left .create-ticket .form-create-ticket .form-item label,#main .left .create-project .form-create-project .step .form-item label{
   margin-bottom: 10px;
   color: #333333;
@@ -2368,4 +2398,16 @@ button, input, optgroup, select, textarea{
 }
 #main .login-box .login-form .form-item input[type=submit]:hover{
   background: orange;
+}
+.select2-container--open{
+	z-index: 9999999;
+}
+.select2-container{
+	width: 100% !important;
+}
+.select2-results__option{
+	font-size: 12px;
+}
+.fprofile .select2-container{
+	width: 61% !important;
 }

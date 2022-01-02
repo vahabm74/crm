@@ -106,122 +106,32 @@ jQuery(document).ready(function($) {
         $('#main .left .all #new-note .note-content textarea').attr('data-color',id);
       });
     //new select box style
-    if($("#note-username").length !== 0){
-      NiceSelect.bind(document.getElementById("note-username"),{
-        searchable: false
-      });
-    }
     if($("#user-reply").length !== 0){
-      NiceSelect.bind(document.getElementById("user-reply"),{
-        searchable: false
-      });
-    }
-    if($("#priority-reply").length !== 0){
-      NiceSelect.bind(document.getElementById("priority-reply"),{
-        searchable: false
-      });
-      NiceSelect.bind(document.getElementById("status-reply"),{
-        searchable: false
-      });
+      $('#user-reply,#priority-reply,#status-reply').select2({});
     }
     if($("#info-ticket-status-select").length !== 0){
-      NiceSelect.bind(document.getElementById("info-ticket-status-select"),{
-        searchable: false
-      });
-      NiceSelect.bind(document.getElementById("info-ticket-user-value-select"),{
-        searchable: false
-      });
-      NiceSelect.bind(document.getElementById("info-ticket-priority-value-select"),{
-        searchable: false
-      });
+      $('#info-ticket-user-value-select,#info-ticket-priority-value-select,#info-ticket-status-select').select2();
     }
     if($('.filter-tickets .ticket-name').length !== 0){
-      NiceSelect.bind(document.getElementById("ticket-name"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("ticket-user"),{
-        searchable: false
-      });
-      NiceSelect.bind(document.getElementById("ticket-status"),{
-        searchable: false
-      });
-      NiceSelect.bind(document.getElementById("ticket-kind"),{
-        searchable: false
-      });
-      NiceSelect.bind(document.getElementById("ticket-priority"),{
-        searchable: false
-      });
-    }
-    if($('.filter-tickets .box').length !== 0){
-      NiceSelect.bind(document.getElementById("filter-day"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("filter-month"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("filter-work"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("filter-project"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("filter-ticket"),{
-        searchable: false,
-      });
-    }
-    if($('.set-timer').length !== 0){
-      NiceSelect.bind(document.getElementById("project-n"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("project-t"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("project-task"),{
-        searchable: false,
-      });
+      $('#ticket-name,#ticket-user,#ticket-status,#ticket-kind,#ticket-priority').select2({});
     }
     if($('#connection-address').length !== 0){
-      NiceSelect.bind(document.getElementById("connection-way"),{
-        searchable: false,
-      });
-    }
-    if($('.form-create-ticket').length !== 0){
-      NiceSelect.bind(document.getElementById("ticket-priority-c"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("ticket-project-c"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("ticket-user-c"),{
-        searchable: false,
-      });
+      $('#connection-way').select2();
     }
     if($('.form-create-project').length !== 0){
-      NiceSelect.bind(document.getElementById("project-customer-p"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("project-manager-p"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("project-info-p"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("project-server-p"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("project-content-p"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("project-edu-p"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("project-category-p"),{
-        searchable: false,
-      });
-      NiceSelect.bind(document.getElementById("project-team-p"),{
-        searchable: false,
-      });
+      $('#project-customer-p,#project-manager-p,#project-info-p,#project-server-p,#project-content-p,#project-edu-p,#project-category-p,#project-team-p').select2();
     }
+    if($('.form-create-ticket').length !== 0){
+      $('#ticket-priority-c,#ticket-project-c,#ticket-user-c').select2();
+    }
+    if($('.filter-tickets .box').length !== 0){
+      $('#filter-day,#filter-month,#filter-work,#filter-project,#filter-ticket').select2();
+    }
+    if($('.set-timer').length !== 0){
+      $('#project-n,#project-t,#project-task').select2();
+    }
+
+
     //ticket time hover description
     $('#main .left .all-ticket-t .time-main .right-t ul li.description').hover(function() {
       let txt = $(this).text();

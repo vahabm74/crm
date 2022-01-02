@@ -130,7 +130,11 @@ jQuery(document).ready(function($) {
     if($('.set-timer').length !== 0){
       $('#project-n,#project-t,#project-task').select2();
     }
-
+    if($('.ticket-page').length !== 0){
+      $('#ticket-number-p').select2({
+        minimumResultsForSearch: -1
+      });
+    }
 
     //ticket time hover description
     $('#main .left .all-ticket-t .time-main .right-t ul li.description').hover(function() {

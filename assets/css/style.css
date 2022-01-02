@@ -741,6 +741,22 @@ button, input, optgroup, select, textarea{
   overflow: auto;
   padding: 8px;
 }
+#main .left .all .tickets .content .ticket-page{
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#main .left .all .tickets .content .ticket-page .number{
+	display: flex;
+	align-items: center;
+  white-space: nowrap;
+}
+#main .left .all .tickets .content .ticket-page .number label{
+	font-size: 12px;
+	color: #636363;
+	margin-left: 5px;
+}
 #main .left .all .tickets .content::-webkit-scrollbar {
     height: 5px;
 }
@@ -1455,7 +1471,6 @@ button, input, optgroup, select, textarea{
 }
 #main .left .all .notes .list-notes{
   padding: 15px;
-  max-height: 400px;
   overflow: auto;
 }
 #main .left .all .notes .list-notes::-webkit-scrollbar,#main .left .all .tickets .content-ticket .history-ticket tbody::-webkit-scrollbar{
@@ -1518,7 +1533,6 @@ button, input, optgroup, select, textarea{
   padding: 10px;
   text-align: justify;
   font-size: 12px;
-  display: none;
   white-space: pre-line;
 }
 #main .left .all .notes .list-notes .note .n-content p{

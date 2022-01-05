@@ -1195,13 +1195,25 @@ button, input, optgroup, select, textarea{
   font-size: 18px;
   margin-left: 5px;
 }
-#main .left .all .tickets .content-ticket .messages .message a[href$=".pdf"]::before{
+#main .left .all .tickets .content-ticket .messages .message .message-content a{
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 5px 15px;
+	border-radius: 5px;
+	background: #1e1e71;
+	color: #fff;
+}
+#main .left .all .tickets .content-ticket .messages .message .message-content a:hover{
+	background:orange;
+}
+#main .left .all .tickets .content-ticket .messages .message .message-content a.pdf::before{
   content:"\f1c1";
 }
-#main .left .all .tickets .content-ticket .messages .message a[href$=".zip"]::before{
+#main .left .all .tickets .content-ticket .messages .message .message-content a.zip::before{
   content:"\f1c6";
 }
-#main .left .all .tickets .content-ticket .messages .message a[href$=".png"]::before,#main .left .all .tickets .content-ticket .messages .message a[href$=".jpg"]::before,#main .left .all .tickets .content-ticket .messages .message a[href$=".jpeg"]::before,#main .left .all .tickets .content-ticket .messages .message a[href$=".gif"]::before{
+#main .left .all .tickets .content-ticket .messages .message .message-content a.image::before{
   content:"\f1c5";
 }
 #main .left .all .tickets .content-ticket .messages .message .bottom-message input[type=text]{

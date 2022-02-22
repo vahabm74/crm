@@ -338,6 +338,46 @@ button, input, optgroup, select, textarea{
 	right: 26px;
 	top: 13px;
 }
+#main .right .main-menu ul li.has-child .dropdown{
+	cursor: pointer;
+	padding: 8px 14px 3px 14px;
+	position: absolute;
+	left: 0;
+	top: 5px;
+}
+#main .right .main-menu ul li.has-child .dropdown i{
+	position: static;
+	margin: 0;
+	pointer-events: auto;
+	-webkit-transition: all ease 300ms;
+	-moz-transition: all ease 300ms;
+	-ms-transition: all ease 300ms;
+	-o-transition: all ease 300ms;
+	transition: all ease 300ms;
+}
+#main .right .main-menu ul li.has-child.open .dropdown i{
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+#main .right .main-menu ul li.has-child .submenu{
+	display: none;
+	font-size: 12px;
+	padding-right: 13px;
+	padding-bottom: 12px;
+}
+#main .right .main-menu ul li.has-child .submenu li a{
+	padding: 7px 3em 7px 0;
+}
+#main .right .main-menu ul li.has-child .submenu li i{
+	font-size: 12px;
+	top: 13px;
+}
+#main .right .main-menu ul li.has-child .submenu li a:hover,#main .right .main-menu ul li.has-child .dropdown i:hover,#main .right .main-menu ul li.has-child.open .dropdown i,#main .right .main-menu ul li.has-child.open .submenu li.current a,#main .right .main-menu ul li.has-child.open .submenu li.current i{
+	color:#e18d07;
+}
 #main .right .logout{
   display: block;
   text-align: center;

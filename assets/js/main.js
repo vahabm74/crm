@@ -332,5 +332,10 @@ jQuery(document).ready(function($) {
     });
     //show required start on the label
     $('.form-item .rq').append('<span class="star">*</span>');
-    //show note list and change width
+    //open and close submenu
+    $('li.has-child').append('<span class="dropdown"><i class="fas fa-angle-down"></i></span>');
+    $('li.has-child .dropdown').click(function(){
+      $(this).closest('.has-child').siblings().removeClass('open').find('.submenu').slideUp(200);
+      $(this).closest('.has-child').toggleClass('open').find('.submenu').slideToggle(400);
+    });
 });

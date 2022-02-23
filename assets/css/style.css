@@ -2477,3 +2477,169 @@ button, input, optgroup, select, textarea{
 .fprofile .select2-container{
 	width: 61% !important;
 }
+/*month panel page styles*/
+#main .month-panel .title{
+	margin-bottom: 40px;
+}
+#main .month-panel .panel-details{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+#main .month-panel .panel-details .right-panel{
+	width: 65%;
+}
+#main .month-panel .panel-details .right-panel .section1,#main .month-panel .panel-details .right-panel .section2{
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	background: #fff;
+	padding: 15px 0;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+#main .month-panel .panel-details .right-panel .section1 h3{
+	text-align: center;
+	font-size: 1.3rem;
+	margin: 0;
+	padding: 20px 0 50px 0;
+	position: relative;
+	font-weight: bold;
+}
+#main .month-panel .panel-details .right-panel .section1 h3::before,#main .month-panel .panel-details .right-panel .section1 h3::after{
+	content: " ";
+	width: 100px;
+	height: 4px;
+	background: #232474;
+	position: absolute;
+	top: 35%;
+	right: 25%;
+}
+#main .month-panel .panel-details .right-panel .section1 h3::after{
+	right: auto;
+	left: 25%;
+}
+#main .month-panel .panel-details .right-panel .section1 .user-info-month{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0 50px;
+}
+#main .month-panel .panel-details .right-panel .section1 .user-info-month .item{
+	width: 49%;
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-start;
+	margin-bottom: 20px;
+}
+#main .month-panel .panel-details .right-panel .section1 .user-info-month .item:nth-child(2n){
+	justify-content: flex-end;
+}
+#main .month-panel .panel-details .right-panel .section1 .user-info-month .item i{
+	font-size: 20px;
+	color: #704dea;
+	background: #eeecf9;
+	padding: 7px;
+	border-radius: 5px;
+	margin-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 15%;
+}
+#main .month-panel .panel-details .right-panel .section1 .user-info-month .item .desc{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	width: 60%;
+}
+#main .month-panel .panel-details .right-panel .section1 .user-info-month .item .desc .dtitle{
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#main .month-panel .panel-details .right-panel .section1 .user-info-month .item .desc .dvalue{
+	color: #636363;
+	font-weight: 600;
+}
+#main .month-panel .panel-details .right-panel .section1 .notice{
+	text-align: center;
+	color: red;
+	margin-bottom: 15px;
+}
+#main .month-panel .panel-details .right-panel .section1 .request{
+	text-align: center;
+}
+#main .month-panel .panel-details .right-panel .section1 .request button{
+	border: none;
+	box-shadow: 0 0 10px rgba(0,0,0,0.15);
+	border-radius: 5px;
+	color: #fff;
+	background: #1e1f71;
+	padding: 10px 30px;
+}
+#main .month-panel .panel-details .right-panel .section1 .request button:hover{
+	background: #e28e07;
+}
+#main .month-panel .panel-details .right-panel .section1 .total-price{
+	text-align: center;
+	background: #eeecf9;
+	padding: 10px 0;
+	box-shadow: 0 0 8px rgba(0,0,0,0.3);
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+#main .month-panel .panel-details .right-panel .section1 .total-price p{
+	margin: 0;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #704dea;
+}
+#main .month-panel .panel-details .right-panel .section1 .download-fish{
+	text-align: center;
+}
+#main .month-panel .panel-details .right-panel .download-fish a{
+	border-bottom: 2px solid #876bed;
+	color: #333;
+	font-weight: 600;
+}
+#main .month-panel .panel-details .right-panel .download-fish a:hover{
+	color:#e28e07;
+}
+#main .month-panel .panel-details .right-panel .section2{
+	padding: 15px;
+}
+#main .month-panel .panel-details .right-panel .section2 .leave-details{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	border-bottom: 1px solid #7cb1df;
+	padding-bottom: 20px;
+}
+#main .month-panel .panel-details .right-panel .section2 .leave-details .item{
+	width: 33%;
+	border-left: 1px solid #7cb1df;
+	padding: 10px 5px;
+}
+#main .month-panel .panel-details .right-panel .section2 .leave-details .item:last-child{
+	border-left: 0;
+}
+#main .month-panel .panel-details .right-panel .section2 .leave-details .item h3{
+	font-size: 0.8rem;
+	text-align: center;
+	color: #000;
+	margin-bottom: 15px;
+}
+#main .month-panel .panel-details .right-panel .section2 .leave-details .item .value{
+	text-align: center;
+	font-size: 1.8rem;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+#main .month-panel .panel-details .left-panel{
+	width: 33%;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	background: #1e1f71;
+	padding: 15px;
+}

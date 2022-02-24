@@ -2495,7 +2495,7 @@ button, input, optgroup, select, textarea{
 	background: #fff;
 	padding: 15px 0;
 	overflow: hidden;
-	margin-bottom: 15px;
+	margin-bottom: 22px;
 }
 #main .month-panel .panel-details .right-panel .section1 h3{
 	text-align: center;
@@ -2615,6 +2615,7 @@ button, input, optgroup, select, textarea{
 	justify-content: space-between;
 	border-bottom: 1px solid #7cb1df;
 	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
 #main .month-panel .panel-details .right-panel .section2 .leave-details .item{
 	width: 33%;
@@ -2625,10 +2626,28 @@ button, input, optgroup, select, textarea{
 	border-left: 0;
 }
 #main .month-panel .panel-details .right-panel .section2 .leave-details .item h3{
-	font-size: 0.8rem;
+	font-size: 0.75rem;
 	text-align: center;
 	color: #000;
 	margin-bottom: 15px;
+	position: relative;
+}
+#main .month-panel .panel-details .right-panel .section2 .leave-details .item h3::before{
+	content: " ";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+}
+#main .month-panel .panel-details .right-panel .section2 .leave-details .item:nth-child(1) h3::before{
+	background: #1678f2;
+}
+#main .month-panel .panel-details .right-panel .section2 .leave-details .item:nth-child(2) h3::before{
+	background: #f3af49;
+}
+#main .month-panel .panel-details .right-panel .section2 .leave-details .item:nth-child(3) h3::before{
+	background: #f76e76;
 }
 #main .month-panel .panel-details .right-panel .section2 .leave-details .item .value{
 	text-align: center;
@@ -2636,10 +2655,137 @@ button, input, optgroup, select, textarea{
 	margin-top: 25px;
 	margin-bottom: 15px;
 }
+#main .month-panel .panel-details .right-panel .section2 .leave-details .item .desc{
+	font-size: 0.7rem;
+	text-align: center;
+	color: #959292;
+	font-weight: 600;
+}
+#main .month-panel .panel-details .right-panel .section2 .vacations h3{
+	font-size: 1rem;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+#main .month-panel .panel-details .right-panel .section2 .vacations .vacations-list{
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+#main .month-panel .panel-details .right-panel .section2 .vacations .vacations-list li{
+	background: #1678f2;
+	color: #fff;
+	padding: 5px 20px;
+	border-radius: 5px;
+	margin-left: 15px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	border: 1px #1678f2;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 13px;
+}
+#main .month-panel .panel-details .right-panel .section2 .vacations .vacations-list li .day{
+	margin-left: 10px;
+}
 #main .month-panel .panel-details .left-panel{
 	width: 33%;
+}
+#main .month-panel .panel-details .left-panel .section1{
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	background: #1e1f71;
 	padding: 15px;
+	margin-bottom: 22px;
+}
+#main .month-panel .panel-details .left-panel .section1 .circle-time{
+	padding: 20px;
+}
+#main .month-panel .panel-details .left-panel .section1 .circle-time canvas{
+	margin-bottom: 47px;
+}
+#main .month-panel .panel-details .left-panel .section1 .circle-time .desc{
+	color: #fff;
+	font-size: 0.70rem;
+	text-align: right;
+	margin-bottom: 5px;
+	position: relative;
+}
+#main .month-panel .panel-details .left-panel .section1 .circle-time .desc::before{
+	content: " ";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: absolute;
+	top: 6px;
+	right: -20px;
+}
+#main .month-panel .panel-details .left-panel .section1 .circle-time .desc.more::before{
+	background: #68a5db;
+}
+#main .month-panel .panel-details .left-panel .section1 .circle-time .desc.less::before{
+	background: #e46844;
+}
+#main .month-panel .panel-details .left-panel .section2{
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	background: #ffffff;
+	padding: 26px 15px;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li{
+	margin-bottom: 10px;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:last-child{
+	margin: 0;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li a{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding: 10px;
+	border: 2px solid;
+	border-radius: 5px;
+	color: #333;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li a img{
+	padding: 6px;
+	margin-left: 10px;
+	border-radius: 5px;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(1) a{
+	background: #fdfafa;
+	border-color: #fde1d7;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(2) a{
+	background: #f9fafc;
+	border-color: #d9e7fc;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(3) a{
+	background: #f8fffd;
+	border-color: #e0fcf5;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(1) a img{
+	background: #f7e7e6;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(2) a img{
+	background: #e1e7f2;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(3) a img{
+	background: #e0fff7;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(1) a:hover{
+	background: #fde1d7;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(2) a:hover{
+	background: #d9e7fc;
+}
+#main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(3) a:hover{
+	background: #e0fcf5;
 }

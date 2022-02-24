@@ -338,4 +338,44 @@ jQuery(document).ready(function($) {
       $(this).closest('.has-child').siblings().removeClass('open').find('.submenu').slideUp(200);
       $(this).closest('.has-child').toggleClass('open').find('.submenu').slideToggle(400);
     });
+    //Tine chart
+    var canvas = document.getElementById("mytime");
+    let ctx = canvas.getContext('2d');
+    var perc = 20;
+    var myChart = new Chart(canvas, {
+      type: 'doughnut',
+      data: {
+        // labels: ['OK', 'WARNING', 'CRITICAL'],
+        datasets: [{
+          // label: '# of Tomatoes',
+          data: [18, 52, 30],
+          backgroundColor: [
+            '#e46844',
+            '#68a5db',
+            '#ffffff'
+          ],
+          borderColor: [
+            '#1e1f71'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+       	// cutoutPercentage: 40,
+        responsive: true,
+        animation: {
+            animateScale: true,
+            animateRotate: true,
+            onComplete : function() {
+                var cx = canvas.width / 2;
+                var cy = canvas.height / 2;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.font = '35px tahoma';
+                ctx.fillStyle = 'white';
+                ctx.fillText(perc+"%", cx, cy);
+            }
+        },
+      }
+    });
 });

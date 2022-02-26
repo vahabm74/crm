@@ -2805,11 +2805,11 @@ button, input, optgroup, select, textarea{
 	background: #232474;
 	position: absolute;
 	top: 35%;
-	right: 32%;
+	right: 26%;
 }
 #main .month-panel .panel-tickets .sub-title::after{
 	right: auto;
-	left: 32%;
+	left: 26%;
 }
 #main .month-panel .panel-tickets .ticket-list{
 	display: flex;

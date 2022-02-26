@@ -2789,3 +2789,75 @@ button, input, optgroup, select, textarea{
 #main .month-panel .panel-details .left-panel .section2 .user-menu li:nth-child(3) a:hover{
 	background: #e0fcf5;
 }
+#main .month-panel .panel-tickets{
+	margin-bottom: 40px;
+}
+#main .month-panel .panel-tickets .sub-title{
+	margin: 30px 0 45px 0;
+	text-align: center;
+	position: relative;
+	font-weight: bold;
+}
+#main .month-panel .panel-tickets .sub-title::before,#main .month-panel .panel-tickets .sub-title::after{
+	content: " ";
+	width: 100px;
+	height: 4px;
+	background: #232474;
+	position: absolute;
+	top: 35%;
+	right: 32%;
+}
+#main .month-panel .panel-tickets .sub-title::after{
+	right: auto;
+	left: 32%;
+}
+#main .month-panel .panel-tickets .ticket-list{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.15);
+	padding: 30px 45px 20px 45px;
+	text-align: center;
+}
+#main .month-panel .panel-tickets .ticket-list .item{
+	width: 20%;
+}
+#main .month-panel .panel-tickets .ticket-list .item .item-title{
+	color: #fff;
+	font-size: 1rem;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.15);
+	font-weight: bold;
+}
+#main .month-panel .panel-tickets .ticket-list .item .item-value{
+	margin: 0;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+#main .month-panel .panel-tickets .ticket-list .item:nth-child(1) .item-title{
+	background: #6c757d;
+}
+#main .month-panel .panel-tickets .ticket-list .item:nth-child(1) .item-value{
+	color:#6c757d;
+}
+#main .month-panel .panel-tickets .ticket-list .item:nth-child(2) .item-title{
+	background: #0d6efd;
+}
+#main .month-panel .panel-tickets .ticket-list .item:nth-child(2) .item-value{
+	color: #0d6efd;
+}
+#main .month-panel .panel-tickets .ticket-list .item:nth-child(3) .item-title{
+	background: #198754;
+}
+#main .month-panel .panel-tickets .ticket-list .item:nth-child(3) .item-value{
+	color:#198754;
+}
+#main .month-panel .panel-tickets .ticket-list .item:nth-child(4) .item-title{
+	background: #dc3545;
+}
+#main .month-panel .panel-tickets .ticket-list .item:nth-child(4) .item-value{
+	color:#dc3545;
+}

@@ -2798,7 +2798,7 @@ button, input, optgroup, select, textarea{
 	position: relative;
 	font-weight: bold;
 }
-#main .month-panel .panel-tickets .sub-title::before,#main .month-panel .panel-tickets .sub-title::after{
+#main .month-panel .panel-tickets .sub-title::before,#main .month-panel .panel-tickets .sub-title::after,#main .info-user .title::after,#main .info-user .title::before{
 	content: " ";
 	width: 100px;
 	height: 4px;
@@ -2860,4 +2860,201 @@ button, input, optgroup, select, textarea{
 }
 #main .month-panel .panel-tickets .ticket-list .item:nth-child(4) .item-value{
 	color:#dc3545;
+}
+/*Info user new page style*/
+#main .info-user .title{
+	text-align: center;
+	font-size: 1.7rem;
+	font-weight: bold;
+	margin-bottom: 50px;
+	position: relative;
+}
+#main .info-user .title::after{
+	right: auto;
+	left: 32%;
+	top:39%;
+}
+#main .info-user .title::before{
+	right: 32%;
+	top:39%;
+}
+#main .info-user .info-user-header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+#main .info-user .info-user-header .info-user-header-avatar,#main .info-user .info-user-header .info-user-header-notice{
+	width: 45%;
+}
+#main .info-user .info-user-header .info-user-header-avatar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#main .info-user .info-user-header .info-user-header-avatar .avatar{
+	display: flex;
+	align-items: center;
+}
+#main .info-user .info-user-header .info-user-header-avatar .avatar img{
+	border-radius: 50%;
+	margin-left: 20px;
+}
+#main .info-user .info-user-header .info-user-header-avatar .user-status a{
+	background: #c0ded0;
+	padding: 5px 30px;
+	border-radius: 30px;
+	border: 2px solid #198754;
+	color: #198754;
+}
+#main .info-user .info-user-header .info-user-header-notice{
+	text-align: center;
+	padding: 24px 30px;
+	background: #bdd4e9;
+	border-radius: 10px;
+	line-height: 1.7;
+	font-weight: 300;
+}
+#main .info-user .info-user-form .user-form .col3,#main .info-user .info-user-form .user-form .col1{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#main .info-user .info-user-form .user-form .col3 .item{
+	width: 32%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+#main .info-user .info-user-form .user-form .col3 .item label{
+	font-size: 0.8rem;
+	font-weight: 500;
+	margin-bottom: 7px;
+	width: 100%;
+}
+#main .info-user .info-user-form .user-form .col3 .item label span{
+	font-size: 11px;
+	color: #636363;
+	float: left;
+}
+#main .info-user .info-user-form .user-form .col3 .item label span i{
+	color: #4c67ff;
+	vertical-align: middle;
+}
+#main .info-user .info-user-form .user-form .col3 .item input,#main .info-user .info-user-form .user-form .col3 .item #select2-user-marrige-container,#select2-user-graduate-container,#select2-user-off-day-container,#select2-user-vacation-kind-container,#main .info-user .info-user-form .user-form .col1 .item textarea{
+	background: #fff;
+	padding: 5px;
+	border-radius: 5px;
+	width: 100%;
+	outline: 0;
+	border:2px solid #e6e1e1;
+}
+#main .info-user .info-user-form .user-form .col3 .item input:focus,#main .info-user .info-user-form .user-form .col1 .item textarea:focus{
+	border-color:#1b1578;
+}
+#main .info-user .info-user-form .user-form .col3 .item .select2-selection--single{
+	border:0;
+}
+#main .info-user .info-user-form .user-form .col3 .item .select2-selection__arrow{
+	top: 9px;
+}
+#main .info-user .info-user-form .user-form .col3 .item input#user-idcard{
+	border-color: red;
+}
+#main .info-user .info-user-form .user-form .col3 .item input[type=file]{
+	border:2px dashed #ffc963;
+	color: transparent;
+}
+#main .info-user .info-user-form .user-form .col1 .item{
+	width: 100%;
+}
+#main .info-user .info-user-form .user-form .col1 .item label{
+	margin-bottom: 10px;
+}
+#main .info-user .info-user-form .user-form .col1 .item textarea{
+	resize: none;
+}
+#main .info-user .info-user-form .user-form .submit{
+	text-align: center;
+	margin: 30px 0 80px 0;
+}
+#main .info-user .info-user-form .user-form .submit .submit-user-info{
+	background: #1b1578;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px 40px;
+	font-size: 0.85rem;
+	border: none;
+}
+#main .info-user .info-user-form .user-form .submit .submit-user-info:hover{
+	 background: orange;
+}
+#main .info-user .info-user-bank .title::before{
+	right: 29%;
+}
+#main .info-user .info-user-bank .title::after{
+	left: 29%;
+}
+#main .info-user .info-user-bank .info-user-bank-content{
+	box-shadow: 0 0 10px rgba(0,0,0,0.15);
+	border-radius: 10px;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	overflow: hidden;
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank{
+	background: #fff;
+	padding: 15px 40px;
+	width: 70%;
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank .right-bank-header{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank .right-bank-header img{
+	padding-left: 15px;
+	margin-left: 15px;
+	border-left:1px solid #899bff;
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank .right-bank-header .user-desc-bank{
+	width: 50%;
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank .right-bank-header .user-desc-bank p{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1rem;
+	margin-bottom: 25px;
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank .right-bank-header .user-desc-bank p:last-child{
+	margin-bottom: 0;
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank .right-bank-header .user-desc-bank p span:last-child{
+	font-weight: 600;
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank .right-bank-middle{
+	margin-top: 50px;
+	width: calc(50% + 105px);
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank .right-bank-middle .item{
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1rem;
+}
+#main .info-user .info-user-bank .info-user-bank-content .right-bank .right-bank-middle .item .pvalue{
+	direction: ltr;
+	font-weight: 600;
+	color: #006fb8;
+}
+#main .info-user .info-user-bank .info-user-bank-content .left-bank{
+	width: 30%;
+	padding: 15px;
+	background: #98bdf5;
 }

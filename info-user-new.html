@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <title>مدیریت پروژه افروز وب</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/trumbowyg.colors.min.css">
+    <link rel="stylesheet" href="assets/css/trumbowyg.highlight.min.css">
+    <link rel="stylesheet" href="assets/css/trumbowyg.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="main">
+      <!-- begin right sidebar-->
+      <div class="right">
+        <!-- begin right sidebar header-->
+        <div class="header">
+          <!-- begin logo sidebar -->
+          <h1>
+            افروز وب
+            <a href="#!">
+              <img src="assets/images/logo.png" alt="مدیریت پروژه افروز وب" title="مدیریت پروژه افروز وب" class="img-fluid">
+            </a>
+          </h1>
+          <!-- begin colapse button -->
+          <img src="assets/images/right-arrow.png" alt="" title="" class="img-fluid colapse">
+        </div>
+        <!-- begin profile box -->
+        <div class="profile">
+          <div class="avatar">
+            <img src="assets/images/vahab.jpg" alt="" title="" class="img-fluid">
+          </div>
+          <div class="name">
+            <p>وهاب محمدی</p>
+            <span>فرانت اند</span>
+          </div>
+        </div>
+        <!-- begin navbar -->
+        <div class="main-menu">
+          <ul>
+            <li>
+              <i class="fas fa-layer-group"></i>
+              <a href="#!">داشبورد</a>
+            </li>
+            <li>
+              <i class="fas fa-server"></i>
+              <a href="#!">پروژه ها</a>
+            </li>
+            <li>
+              <i class="fas fa-list-alt"></i>
+              <a href="#!">کارهای من</a>
+            </li>
+            <li class="active">
+              <i class="fas fa-receipt"></i>
+              <a href="#!">تیکت ها</a>
+            </li>
+            <li>
+              <i class="fas fa-fingerprint"></i>
+              <a href="#!">پروفایل</a>
+            </li>
+          </ul>
+        </div>
+        <!-- begin loguat button-->
+        <a href="#!" class="logout">خروج از حساب کاربری</a>
+      </div>
+      <!-- begin left sidebar-->
+      <div class="left detail-ticket">
+        <div class="overlay"></div>
+        <!-- begin header box -->
+        <div class="header">
+          <!-- begin breadcrumbs-->
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="#!">داشبورد</a>
+                <i class="fas fa-angle-left"></i>
+              </li>
+              <li class="current">
+                <a>اطلاعات کاربر</a>
+              </li>
+            </ul>
+          </div>
+          <!-- begin notification-->
+          <div class="notification">
+            <ul>
+              <li>
+                <a href="#!">
+                  <i class="far fa-bell"></i>
+                  <!-- if has notification this 'span' tag will be show-->
+                  <span class="ifhas"></span>
+                </a>
+              </li>
+            </ul>
+            <!--notif box-->
+            <div class="notif-box">
+              <h2 class="title">
+                اعلان های شما
+                <!-- click to remove all notification-->
+                <span>حذف همه</span>
+              </h2>
+              <ul class="notif-list">
+                <li>
+                  <p class="notif-title">ایجاد تیکت جدید</p>
+                  <p class="notif-content">
+                    کاربر مهری محمدی تیکت جدید برای پروژه ، ' TaskNa ' ، با عنوان ، ' پروژه های گیت لب ' ثبت کرد .
+                  </p>
+                </li>
+                <li>
+                  <p class="notif-title">ایجاد تیکت جدید</p>
+                  <p class="notif-content">
+                    کاربر مهری محمدی تیکت جدید برای پروژه ، ' TaskNa ' ، با عنوان ، ' پروژه های گیت لب ' ثبت کرد .
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- begin Info user -->
+        <div class="info-user">
+          <h2 class="title">
+            اطلاعات کاربر
+          </h2>
+          <!--info user header begin-->
+          <div class="info-user-header">
+            <!--User avatar , name and status start -->
+            <div class="info-user-header-avatar">
+              <div class="avatar">
+                <img src="assets/images/vahab.jpg" alt="User avatar" title="User avatar" class="img-fluid" width="90" height="90">
+                <span>زهرا گلباغی - ستیا (setia)</span>
+              </div>
+              <div class="user-status">
+                <a href="#!">فعال</a>
+              </div>
+            </div>
+            <!--User avatar , name and status end -->
+            <!-- Info user Notice begin-->
+            <div class="info-user-header-notice">
+              برای تکمیل فرایند ثبت نام و شروع به کار با سیستم افروزوب لازم است اطلاعات زیر را با دقت تکمیل نمایید.
+            </div>
+            <!-- Info user Notice end-->
+          </div>
+          <!--info user header end-->
+          <!--info user form begin-->
+          <div class="info-user-form">
+            <form class="user-form" action="#!" method="post">
+              <div class="col3">
+                <p class="item">
+                  <label for="user-resume">
+                    رزومه
+                    <span>
+                      <i class="fas fa-cloud-upload-alt"></i>
+                      رزومه کاری خود را اپلود کنید
+                    </span>
+                  </label>
+                  <input type="file" name="user-resume" value="" id="user-resume">
+                </p>
+                <p class="item">
+                  <label for="user-idcard">
+                    کارت ملی
+                    <span class="text-danger">
+                      <i class="fas fa-id-card"></i>
+                      پر کردن این فیلد الزامیست !
+                    </span>
+                  </label>
+                  <input type="file" name="user-idcard" value="" id="user-idcard" required="required">
+                </p>
+                <p class="item">
+                  <label for="user-contract">
+                    قرارداد
+                    <span>
+                      <i class="fas fa-cloud-upload-alt"></i>
+                      قرارداد کاری خود را آبلود کنید.
+                    </span>
+                  </label>
+                  <input type="file" name="user-contract" value="" id="user-contract">
+                </p>
+                <p class="item">
+                  <label for="user-email">
+                    ایمیل
+                  </label>
+                  <input type="email" name="user-email" value="" id="user-email" required>
+                </p>
+                <p class="item">
+                  <label for="user-username">
+                    نام کاربری
+                  </label>
+                  <input type="text" name="user-username" value="" id="user-username" required>
+                </p>
+                <p class="item">
+                  <label for="user-phone">
+                    تلفن همراه
+                  </label>
+                  <input type="tel" name="user-phone" value="" id="user-phone" required>
+                </p>
+                <p class="item">
+                  <label for="user-phone-alt">
+                    تلفن ثابت
+                  </label>
+                  <input type="tel" name="user-phone-alt" value="" id="user-phone-alt" required>
+                </p>
+                <p class="item">
+                  <label for="user-marrige">
+                    وضعیت تاهل
+                  </label>
+                  <select class="user-marrige" id="user-marrige" name="user-marrige" required>
+                    <option value="0" selected>مجرد</option>
+                    <option value="1">متاهل</option>
+                  </select>
+                </p>
+                <!-- if user selected user-marrige on '1' this input will be show-->
+                <p class="item if-married">
+                  <label for="user-children">
+                    تعداد فرزند
+                  </label>
+                  <input type="number" name="user-children" value="" id="user-children">
+                </p>
+                <!-- if user selected user-marrige on '1' this input will be show-->
+                <p class="item if-married">
+                  <label for="user-children-desc">
+                    جنسیت و تاریخ تولد فرزندان
+                  </label>
+                  <input type="text" name="user-children-desc" value="" id="user-children-desc" placeholder="جنسیت و تاریخ تولد فرزندان">
+                </p>
+                <!-- if user selected user-marrige on '1' this input will be show-->
+                <p class="item if-married">
+                  <label for="user-date-married">
+                    سالگرد ازدواج
+                  </label>
+                  <input type="text" name="user-date-married" value="" id="user-date-married">
+                </p>
+                <p class="item">
+                  <label for="user-graduate">
+                    تحصیلات
+                  </label>
+                  <select class="user-graduate" id="user-graduate" name="user-graduate" required>
+                    <option value="0" selected>دیپلم</option>
+                    <option value="1">کارشناسی</option>
+                    <option value="2">کارشناسی ارشد</option>
+                    <option value="3">دکترا</option>
+                  </select>
+                </p>
+                <p class="item">
+                  <label for="user-field">
+                    رشته تحصیلی
+                  </label>
+                  <input type="text" name="user-field" value="" id="user-field" required>
+                </p>
+                <p class="item">
+                  <label for="user-expert">
+                    تخصص کاری
+                  </label>
+                  <input type="text" name="user-expert" value="" id="user-expert" required>
+                </p>
+                <p class="item">
+                  <label for="user-like">
+                    علایق شخصی و کاری
+                  </label>
+                  <input type="text" name="user-like" value="" id="user-like" required>
+                </p>
+                <p class="item">
+                  <label for="user-goal">
+                    اهداف شغلی
+                  </label>
+                  <input type="text" name="user-goal" value="" id="user-goal" required>
+                </p>
+                <p class="item">
+                  <label for="user-birthday">
+                    تاریخ تولد
+                  </label>
+                  <input type="text" name="user-birthday" value="" id="user-birthday" required>
+                </p>
+                <p class="item">
+                  <label for="user-telegram">
+                    آی دی تلگرام
+                  </label>
+                  <input type="text" name="user-telegram" value="" id="user-telegram" required>
+                </p>
+                <p class="item">
+                  <label for="user-sallary-perfect">
+                    حقوق ایده آل
+                  </label>
+                  <input type="text" name="user-sallary-perfect" value="" id="user-sallary-perfect" required>
+                </p>
+                <p class="item">
+                  <label for="user-sallary-agreed">
+                    حقوق توافق شده
+                  </label>
+                  <input type="text" name="user-sallary-agreed" value="" id="user-sallary-agreed" required>
+                </p>
+                <p class="item">
+                  <label for="user-start-contract">
+                    شروع قرارداد
+                  </label>
+                  <input type="text" name="user-start-contract" value="" id="user-start-contract" required>
+                </p>
+                <p class="item">
+                  <label for="user-end-contract">
+                    اتمام قرارداد
+                  </label>
+                  <input type="text" name="user-end-contract" value="" id="user-end-contract" required>
+                </p>
+                <p class="item">
+                  <label for="user-time-month">
+                    ساعت کاری در ماه
+                  </label>
+                  <input type="text" name="user-time-month" value="" id="user-time-month" required>
+                </p>
+                <p class="item">
+                  <label for="user-time-online">
+                    ساعت آنلاین بودن
+                  </label>
+                  <input type="text" name="user-time-online" value="" id="user-time-online" required>
+                </p>
+                <p class="item">
+                  <label for="user-off-day">
+                    روز آف هفتگی
+                    <span>
+                      آف غیر از پنج شنبه و جمعه 1.5 روز خواهد بود
+                    </span>
+                  </label>
+                  <select class="user-off-day" id="user-off-day" name="user-off-day" required>
+                    <option value="1" selected>شنبه</option>
+                    <option value="2">یکشنبه</option>
+                    <option value="3">دوشنبه</option>
+                    <option value="4">سه شنبه</option>
+                    <option value="5">چهارشنبه</option>
+                    <option value="6">پنج شنبه</option>
+                    <option value="7">جمعه</option>
+                  </select>
+                </p>
+                <p class="item">
+                  <label for="user-vacation-kind">
+                    تعطیلات انتخابی
+                    <span>
+                      تعطیلات خارج از تعطیلات رسمی تقویم 1.5 روز خواهد بود
+                    </span>
+                  </label>
+                  <select class="user-vacation-kind" id="user-vacation-kind" name="user-vacation-kind" required>
+                    <option value="1" selected>تعطیلات تقویم</option>
+                    <option value="2">تعطیلات خارج از تقویم</option>
+                  </select>
+                </p>
+                <p class="item">
+                  <label for="user-credit-card">
+                    شماره کارت
+                    <span>
+                      فقط بانک سامان
+                    </span>
+                  </label>
+                  <input type="text" name="user-credit-card" value="" id="user-credit-card" required>
+                </p>
+                <p class="item">
+                  <label for="user-account-number">
+                    شماره حساب
+                    <span>
+                      فقط بانک سامان
+                    </span>
+                  </label>
+                  <input type="text" name="user-account-number" value="" id="user-account-number" required>
+                </p>
+                <p class="item">
+                  <label for="user-shaba-number">
+                   شماره شبا
+                     <span>
+                       فقط بانک سامان
+                     </span>
+                  </label>
+                  <input type="text" name="user-shaba-number" value="" id="user-shaba-number" required>
+                </p>
+              </div>
+              <div class="col1">
+                <p class="item">
+                  <label for="user-address">
+                    آدرس پستی جهت ارسال قرارداد
+                  </label>
+                  <textarea type="text" name="user-address" rows="4" value="" id="user-address" required></textarea>
+                </p>
+              </div>
+              <p class="submit">
+                <input type="submit" name="submit" class="submit-user-info" value="ثبت اطلاعات">
+              </p>
+            </form>
+          </div>
+          <!--info user form end-->
+          <!--info user info bank start-->
+          <div class="info-user-bank">
+            <h2 class="title">اطلاعات حساب بانکی</h2>
+            <div class="info-user-bank-content">
+              <div class="right-bank">
+                <section class="right-bank-header">
+                  <img src="assets/images/logo-bank.svg" alt="بانک سامان" title="بانک سامان" class="img-fluid" width="90" height="90">
+                  <div class="user-desc-bank">
+                    <p class="bank-name">
+                      <span class="bank-title">نام بانک :</span>
+                      <span class="bank-value">بانک سامان</span>
+                    </p>
+                    <p class="bank-user-name">
+                      <span class="bank-user-title">نام صاحب حساب :</span>
+                      <span class="bank-user-value">زهرا گلباغی</span>
+                    </p>
+                  </div>
+                </section>
+                <section class="right-bank-middle">
+                  <p class="item">
+                    <span class="ptitle">
+                      شماره حساب :
+                    </span>
+                    <span class="pvalue">
+                      826 - 810 - 2379012 - 1
+                    </span>
+                  </p>
+                  <p class="item">
+                    <span class="ptitle">
+                      شماره کارت :
+                    </span>
+                    <span class="pvalue">
+                      1254 - 6585 - 2148 - 9872
+                    </span>
+                  </p>
+                  <p class="item">
+                    <span class="ptitle">
+                      شماره شبا :
+                    </span>
+                    <span class="pvalue">
+                      IRVV - 0560 - 0826 - 8100 - 2379 - 0120 - 01
+                    </span>
+                  </p>
+                </section>
+              </div>
+              <div class="left-bank">
+
+              </div>
+            </div>
+          </div>
+          <!--info user info bank end-->
+        </div>
+        <!-- begin Info user -->
+      </div>
+      <!--Start set timer btn -->
+      <a href="#!" class="set-timer start">
+        <i class="fas fa-play"></i>
+      </a>
+      <!--start btn stop timer-->
+      <a href="#!" class="set-timer-end">
+        <i class="fas fa-stop"></i>
+        <span class="counter">
+          <!-- <span id="minutes"></span>:
+          <span id="seconds"></span> -->
+        </span>
+      </a>
+      <!-- Start form timer box-->
+      <div class="timer-box">
+        <h2>
+          جزییات تسک شما
+          <i class="far fa-window-close"></i>
+        </h2>
+        <form class="form-timer">
+          <p class="form-item">
+            <label for="project-n">پروژه</label>
+            <select class="project-n" name="project-n" id="project-n">z
+              <option value="">فیکستی من</option>
+              <option value="">تعمیراتو</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-t">تیکت</label>
+            <select class="project-t" name="project-t" id="project-t">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="project-task">نوع تسک</label>
+            <select class="project-task" name="project-task" id="project-task">
+              <option value="">لطفا انتخاب کنید</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="description">توضیحات</label>
+            <textarea name="description" id="description" rows="4s" cols="80"></textarea>
+          </p>
+          <p class="form-item">
+            <input type="submit" name="submit" value="ذخیره">
+          </p>
+          <!--value of 'savetime' input dynamically filled when user click to stop timer-->
+          <input type="hidden" name="start-time" value="" class="start-time">
+          <input type="hidden" name="end-time" value="" class="end-time">
+          <input type="hidden" name="savetime" value="" class="savetime">
+        </form>
+      </div>
+    </div>
+  <!-- js files -->
+  <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/sort.js"></script>
+  <script type="text/javascript" src="assets/js/select2.min.js"></script>
+  <script type="text/javascript" src="assets/js/prism.js"></script>
+  <script type="text/javascript" src="assets/js/trumbowyg.min.js"></script>
+  <script type="text/javascript" src="assets/js/trumbowyg.base64.min.js"></script>
+  <script type="text/javascript" src="assets/js/trumbowyg.colors.min.js"></script>
+  <script type="text/javascript" src="assets/js/trumbowyg.highlight.min.js"></script>
+  <script type="text/javascript" src="assets/js/js.cookie.min.js"></script>
+  <script type="text/javascript" src="assets/js/chart.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
+</html>

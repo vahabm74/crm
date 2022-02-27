@@ -135,7 +135,18 @@ jQuery(document).ready(function($) {
         minimumResultsForSearch: -1
       });
     }
-
+    if($('.info-user-form').length !== 0){
+      $('#user-marrige,#user-graduate,#user-off-day,#user-vacation-kind').select2();
+      $('.if-married').css({'display':'none'});
+      $('#user-marrige').on('change', function() {
+        var selectVal = $(this).find('option:selected').val();
+        if (selectVal == 0) {
+          $('.if-married').css({'display':'none'});
+        } else if (selectVal == 1) {
+          $('.if-married').css({'display':'block'});
+        }
+    });
+    }
     //ticket time hover description
     $('#main .left .all-ticket-t .time-main .right-t ul li.description').hover(function() {
       let txt = $(this).text();
@@ -339,43 +350,66 @@ jQuery(document).ready(function($) {
       $(this).closest('.has-child').toggleClass('open').find('.submenu').slideToggle(400);
     });
     //Tine chart
-    var canvas = document.getElementById("mytime");
-    let ctx = canvas.getContext('2d');
-    var perc = 20;
-    var myChart = new Chart(canvas, {
-      type: 'doughnut',
-      data: {
-        // labels: ['OK', 'WARNING', 'CRITICAL'],
-        datasets: [{
-          // label: '# of Tomatoes',
-          data: [18, 52, 30],
-          backgroundColor: [
-            '#e46844',
-            '#68a5db',
-            '#ffffff'
-          ],
-          borderColor: [
-            '#1e1f71'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-       	// cutoutPercentage: 40,
-        responsive: true,
-        animation: {
-            animateScale: true,
-            animateRotate: true,
-            onComplete : function() {
-                var cx = canvas.width / 2;
-                var cy = canvas.height / 2;
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                ctx.font = '35px tahoma';
-                ctx.fillStyle = 'white';
-                ctx.fillText(perc+"%", cx, cy);
-            }
+    if($('.circle-time').length !== 0){
+      var canvas = document.getElementById("mytime");
+      let ctx = canvas.getContext('2d');
+      var perc = 20;
+      var myChart = new Chart(canvas, {
+        type: 'doughnut',
+        data: {
+          // labels: ['OK', 'WARNING', 'CRITICAL'],
+          datasets: [{
+            // label: '# of Tomatoes',
+            data: [18, 52, 30],
+            backgroundColor: [
+              '#e46844',
+              '#68a5db',
+              '#ffffff'
+            ],
+            borderColor: [
+              '#1e1f71'
+            ],
+            borderWidth: 1
+          }]
         },
-      }
-    });
+        options: {
+          // cutoutPercentage: 40,
+          responsive: true,
+          animation: {
+              animateScale: true,
+              animateRotate: true,
+              onComplete : function() {
+                  var cx = canvas.width / 2;
+                  var cy = canvas.height / 2;
+                  ctx.textAlign = 'center';
+                  ctx.textBaseline = 'middle';
+                  ctx.font = '35px tahoma';
+                  ctx.fillStyle = 'white';
+                  ctx.fillText(perc+"%", cx, cy);
+              }
+          },
+        }
+      });
+    }
+    //user info form
+    //input file name
+    $(function () {
+       $('#main .info-user .info-user-form .user-form .col3 .item input[type="file"]').change(function () {
+            if ($(this).val() != "") {
+                   $(this).css('color', '#333');
+            }else{
+                   $(this).css('color', 'transparent');
+            }
+       });
+     });
+     //credit card input seperator
+     String.prototype.toCardFormat = function () {
+          return this.replace(/[^0-9]/g, "").substr(0, 16).split("").reduce(cardFormat, "");
+          function cardFormat(str, l, i) {
+              return str + ((!i || (i % 4)) ? "" : "-") + l;
+          }
+     };
+     $("#user-credit-card").keyup(function () {
+         $(this).val($(this).val().toCardFormat());
+     });
 });

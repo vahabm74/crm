@@ -336,6 +336,17 @@ jQuery(document).ready(function($) {
        ]
       });
     }
+    if($('.info-user-description').length !== 0){
+      $('#userinfodesc').trumbowyg({
+       btns: [
+           ['strong', 'em'],
+           ['link'],
+           ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+           ['removeformat'],
+           ['foreColor', 'backColor'],
+       ]
+      });
+    }
 
     //Close alert profile
     $('#main .left .profile .profile-content .alert-profile i:last-child').click(function() {
